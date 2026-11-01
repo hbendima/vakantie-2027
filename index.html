@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Vijf vakanties voor drie gezinnen, met maximaal vier verblijfstops: vier treinroutes en de Atlantische kust met de auto.">
+  <title>Volgende halte: samen op vakantie · Augustus 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#f5f2e9;--ink:#183d36;--muted:#52635c;--line:#c7cec0;--panel:#e6eadf;--sun:#f3c751;--green:#214e43;--on-green:#fffaf0;--warn:#78430a;--warn-bg:#fff0d0;--focus:#a44113;--serif:"Fraunces",Georgia,serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:5rem}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 "DM Sans",system-ui,sans-serif}a{color:inherit;text-underline-offset:4px}button,input,select,textarea{font:inherit}button,a,select,input,textarea{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--focus);outline-offset:5px}img{display:block;width:100%;object-fit:cover}figure{margin:0}figcaption{font-size:.72rem;line-height:1.5;padding:.6rem 0;color:var(--muted)}figcaption a{white-space:normal}h1,h2,h3,p{margin-top:0}h1,h2,h3{line-height:1.08}h1,h2{font-family:var(--serif);font-weight:600}h1{font-size:clamp(3.25rem,7vw,6.4rem);letter-spacing:-.045em;margin-bottom:1.5rem}h2{font-size:clamp(2rem,4.5vw,3.7rem);letter-spacing:-.03em;max-width:20ch}h3{font-size:1.35rem;line-height:1.25}p{max-width:70ch}ul{padding-left:1.2rem}.wrap{width:min(1240px,calc(100% - 3rem));margin:auto}.skip{position:fixed;top:-10rem;z-index:10;background:var(--sun);padding:1rem}.skip:focus{top:0}.masthead{border-bottom:1px solid var(--line);padding:1rem 0}.masthead .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{font-weight:700;letter-spacing:.04em;font-size:.85rem;text-decoration:none}.masthead nav{display:flex;gap:1.2rem;font-size:.85rem}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:700;margin-bottom:1.3rem}.hero{display:grid;grid-template-columns:1fr 1.05fr;gap:3rem;padding:4.5rem 0 2rem;align-items:center}.hero-copy>p:not(.eyebrow){font-size:1.12rem}.hero-photo img{height:590px;border-radius:100px 8px 8px 8px}.photo-error{padding:2rem;background:var(--panel);color:var(--ink);border:1px dashed var(--line)}.photo-error[hidden]{display:none}.button{display:inline-flex;align-items:center;justify-content:center;gap:.8rem;background:var(--green);color:var(--on-green);padding:.85rem 1.3rem;border:1px solid var(--green);border-radius:5px;text-decoration:none;font-weight:700}.button.secondary{background:transparent;color:var(--ink);border-color:var(--line)}.stats{display:grid;grid-template-columns:repeat(5,1fr);border-block:1px solid var(--line);margin:1.5rem auto 0;padding:1.2rem 0}.stats div{padding:.5rem 1rem;border-right:1px solid var(--line)}.stats div:first-child{padding-left:0}.stats div:last-child{border:0}.stats strong{display:block;font-size:1.35rem}.stats span{font-size:.8rem;color:var(--muted)}section{padding:4.5rem 0;border-bottom:1px solid var(--line)}.section-head{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end;margin-bottom:2rem}.section-head h2{margin-bottom:0}.section-head p{margin-bottom:0}.stamp{display:inline-block;border:1px solid currentColor;border-radius:3px;padding:.2rem .6rem;font-size:.75rem;transform:rotate(-3deg)}.benefits{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem}.benefits strong{display:block;margin-bottom:.4rem}.benefits p{font-size:.9rem}.small{font-size:.85rem;color:var(--muted)}.notice{background:var(--warn-bg);color:var(--warn);border-left:4px solid var(--sun);padding:1rem 1.2rem;font-size:.9rem;margin:1.5rem 0}.notice p:last-child{margin-bottom:0}.route-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}.route-card{border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;background:var(--paper)}.route-card[data-selected="true"]{outline:3px solid var(--green);outline-offset:4px}.route-card img{height:260px}.route-card figcaption{padding:.6rem 1.3rem}.route-content{padding:1rem 1.5rem 1.5rem;display:flex;flex-direction:column;flex:1}.route-label{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700}.route-content h3{font-family:var(--serif);font-size:1.8rem;margin:.6rem 0 1rem}.route-path{font-size:.8rem;color:var(--muted);min-height:3rem}.route-facts{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}.route-facts span{background:var(--panel);padding:.25rem .5rem;border-radius:3px;font-size:.76rem}.tradeoffs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;font-size:.87rem}.tradeoffs ul{margin:.4rem 0 1rem}.route-content .button{margin-top:auto}.table-scroll{overflow-x:auto;margin-top:2rem;border:1px solid var(--line);border-radius:5px}table{border-collapse:collapse;width:100%;text-align:left;font-size:.88rem}th,td{padding:1rem;border-bottom:1px solid var(--line);vertical-align:top}thead{background:var(--panel)}tr:last-child td{border-bottom:0}.comparison{min-width:850px}.comparison tr[data-selected="true"]{background:var(--panel)}.trains{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem}.train img{height:260px;border-radius:5px}.train h3{font-family:var(--serif);font-size:1.8rem;margin:1rem 0}.train p{font-size:.92rem}.train dl{font-size:.87rem;display:grid;grid-template-columns:6rem 1fr;gap:.4rem 1rem}.train dt{font-weight:700}.train dd{margin:0}.gallery{display:grid;grid-template-columns:1.3fr 1fr;gap:2rem}.gallery img{height:320px;border-radius:6px}.route-picker{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;margin:1.5rem 0}.route-picker button{padding:1rem .6rem;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:4px;line-height:1.4}.route-picker button[aria-pressed="true"]{background:var(--green);color:var(--on-green);border-color:var(--green)}.route-picker b{display:block;font-size:1.1rem}.ticket{background:var(--green);color:var(--on-green);padding:1.8rem;border-radius:8px;border-bottom:2px dashed var(--on-green);display:grid;grid-template-columns:1fr auto;gap:1rem}.ticket h3{font-family:var(--serif);font-size:2rem;margin-bottom:.7rem}.ticket p{margin:0;font-size:.9rem}.ticket-number{font-size:3rem;font-weight:700;line-height:1}.timeline{list-style:none;padding:0;margin:2rem 0 0;display:grid;grid-template-columns:1fr 1fr;column-gap:3rem}.day{position:relative;border-left:2px solid var(--line);padding:0 0 2rem 1.6rem;margin-left:.6rem}.day:before{content:"";position:absolute;left:-7px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--green);border:2px solid var(--paper)}.day-num{font-size:.7rem;letter-spacing:.14em;font-weight:700;color:var(--muted)}.day h4{font-size:1.12rem;line-height:1.3;margin:.3rem 0 .6rem}.day p{font-size:.9rem;margin:0 0 .5rem}.day-meta{font-size:.77rem;color:var(--muted)}.day .tip{font-size:.82rem;margin-top:.7rem}.long-trip{display:inline-block;background:var(--warn-bg);color:var(--warn);font-size:.7rem;padding:.1rem .5rem;border-radius:3px}.cost-layout{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:start}.cost-layout .table-scroll{margin-top:0}.budget-box{padding:2rem;background:var(--panel);border-radius:6px}.budget-box label{font-weight:700;display:block}.budget-box input{width:100%;accent-color:var(--green);margin:1rem 0}.range-labels{display:flex;justify-content:space-between;font-size:.8rem}.big-price{font-family:var(--serif);font-size:clamp(2.5rem,5vw,3.7rem);line-height:1.2;margin:1.5rem 0 .3rem}.budget-box output{display:block}.cost-table th:first-child{width:65%}.practical{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}.practical h3{font-size:1.1rem}.practical p{font-size:.9rem}.choice{display:grid;grid-template-columns:1fr 1fr;gap:3rem;background:var(--panel);padding:2.5rem;border-radius:8px}.fields{display:grid;gap:1rem}.fields label{font-size:.85rem;font-weight:700;display:grid;gap:.35rem}select,input[type="number"],textarea{width:100%;min-width:0;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:.75rem}textarea{resize:vertical;min-height:160px;font-size:.9rem}.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}.status{font-size:.85rem;min-height:1.7rem;margin:.8rem 0 0}footer{padding:2rem 0;color:var(--muted);font-size:.8rem}.no-js{padding:1rem;background:var(--warn-bg);color:var(--warn)}[hidden]{display:none!important}
+    @media(prefers-color-scheme:dark){:root{--paper:#122721;--ink:#f0eee2;--muted:#b7c8bd;--line:#456055;--panel:#233d33;--green:#efc854;--on-green:#122721;--sun:#efc854;--warn:#ffe2a8;--warn-bg:#493a22;--focus:#ffb789}.hero-photo img,.route-card img,.train img,.gallery img{filter:brightness(.87)}}
+    @media(max-width:900px){.hero{gap:2rem}.hero-photo img{height:470px}.benefits{grid-template-columns:repeat(3,1fr)}.section-head,.cost-layout{grid-template-columns:1fr}.practical{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(3,1fr)}.stats div{border:0;padding:.5rem 0}.stats strong{font-size:1.15rem}.choice{gap:2rem;padding:1.5rem}}
+    @media(max-width:620px){.wrap{width:calc(100% - 2rem)}.masthead nav{gap:.8rem;font-size:.75rem}.masthead nav a:last-child{display:none}.hero{grid-template-columns:1fr;padding-top:2.5rem;gap:1.5rem}.hero-photo img{height:320px;border-radius:60px 5px 5px 5px}h1{font-size:3.7rem}.stats{grid-template-columns:1fr 1fr}.stats div:last-child{grid-column:1/-1}section{padding:3rem 0}.benefits,.route-grid,.trains,.gallery,.timeline,.cost-layout,.practical,.choice{grid-template-columns:1fr}.benefits{gap:.7rem}.benefits p{margin-bottom:.5rem}.section-head{gap:1rem}.route-card img{height:225px}.route-picker{grid-template-columns:1fr 1fr}.ticket{padding:1.2rem}.ticket h3{font-size:1.6rem}.ticket-number{font-size:2rem}.gallery img{height:250px}.tradeoffs{gap:.8rem}.budget-box{padding:1.5rem}.choice{padding:1.2rem}.cost-table th,.cost-table td{padding:.7rem;font-size:.8rem}.timeline{margin-top:1.5rem}.day{padding-bottom:1.7rem}.masthead .wrap{gap:.5rem}.brand{font-size:.73rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+    @media print{.masthead nav,.route-picker,.actions,.budget-box input{display:none}.wrap{width:100%}body{font-size:11px}.hero-photo img{height:250px}section{padding:1.5rem 0}.route-grid,.trains{grid-template-columns:1fr 1fr}.day,.route-card,.train{break-inside:avoid}}
+    /* The choice overview stays compact; route and accommodation details follow one selected journey. */
+    .wrap{max-width:1160px}
+    h1{font-size:clamp(3rem,5.5vw,5rem)}
+    h2{font-size:clamp(2rem,3.5vw,3rem)}
+    section{padding:3.5rem 0}
+    .hero{padding:3rem 0 1rem;gap:3rem}
+    .hero-photo img{height:420px;border-radius:12px}
+    .hero-copy>p:not(.eyebrow){font-size:1rem}
+    .hero-copy .eyebrow{margin-bottom:1rem}
+    .stats{margin-top:1rem}
+    .stats strong{font-size:1.1rem}
+    .masthead{position:sticky;top:0;z-index:5;background:var(--paper)}
+    .section-head{gap:3rem}
+    .section-head>p{color:var(--muted);font-size:.95rem}
+    #waarom{padding:1rem 0}
+    summary{cursor:pointer}
+    summary:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+    .disclosure{border:1px solid var(--line);border-radius:8px;margin-top:1.5rem}
+    .disclosure>summary{padding:1rem 1.2rem;font-weight:600}
+    .disclosure[open]>summary{border-bottom:1px solid var(--line)}
+    .disclosure-content{padding:1.5rem}
+    #waarom .disclosure{border:0;margin:0}
+    #waarom .disclosure>summary{padding:.5rem 0;font-size:.9rem}
+    .route-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+    .route-picker{grid-template-columns:repeat(5,minmax(0,1fr))}
+    .coast-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.5rem 0}
+    .coast-card{border:1px solid var(--line);border-radius:6px;padding:1.2rem}
+    .coast-card[data-selected="true"]{border:2px solid var(--green)}
+    .coast-card h3{font-size:1.2rem}
+    .coast-card p,.coast-card a{font-size:.85rem}
+    .car-gallery{margin:2rem 0 3rem}
+    .car-gallery h3{font-family:var(--serif);font-size:1.8rem;margin-bottom:.7rem}
+    .car-gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+    .car-gallery-grid img{height:220px;border-radius:8px}
+    .hotel-gallery-link{display:block;margin:1rem 0;font-weight:700}
+    .gallery-intro{display:flex;align-items:start;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+    .gallery-intro p{font-size:.9rem;color:var(--muted)}
+    @media(max-width:620px){.car-gallery-grid{grid-template-columns:1fr}.car-gallery-grid img{height:230px}}
+    @media(max-width:620px){.route-picker{grid-template-columns:1fr 1fr}.coast-options{grid-template-columns:1fr}}
+    .route-card{border-radius:10px}
+    .route-card img{height:170px}
+    .route-card figcaption{padding:.4rem .85rem;font-size:.65rem}
+    .route-card figcaption>.caption-text{display:none}
+    .photo-credit{font-size:.68rem}
+    .photo-credit summary{font-weight:400}
+    .photo-credit p{margin:.5rem 0 0}
+    .route-content{padding:1rem;gap:.7rem}
+    .route-content h3{font-size:1.45rem;margin:0;min-height:3.6rem}
+    .route-content p{font-size:.85rem;margin:0}
+    .route-content .button{width:100%;padding:.75rem .4rem;font-size:.82rem}
+    .route-facts{gap:.35rem;margin:0}
+    .route-price{border-top:1px solid var(--line);padding-top:.8rem}
+    .route-price strong{display:block;font-size:1.03rem}
+    .mini-stays{list-style:none;padding:0;margin:0;font-size:.77rem;color:var(--muted)}
+    .mini-stays li{padding:.15rem 0}
+    .mini-stays b{color:var(--ink)}
+    .comparison{min-width:800px}
+    .disclosure .table-scroll{margin:0;border:0}
+    .route-picker{margin:0 0 1.5rem;gap:.5rem}
+    .route-picker button{font-size:.85rem;padding:.75rem}
+    .route-picker b{display:inline;margin-right:.4rem}
+    .selected-hero{display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:center;margin:2rem 0}
+    .selected-hero img{height:330px;border-radius:10px}
+    .selected-hero h2{font-size:clamp(2rem,3.4vw,3rem);margin-bottom:1rem}
+    .selected-hero .eyebrow{margin-bottom:.75rem}
+    .selected-hero .tradeoffs{font-size:.85rem}
+    .selected-hero .tradeoffs ul{margin-bottom:0}
+    .route-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:1.2rem 0;border-block:1px solid var(--line)}
+    .route-summary strong{display:block;font-size:1.1rem}
+    .route-summary span{font-size:.78rem;color:var(--muted)}
+    .detail-nav{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:.85rem;margin:1.2rem 0 2rem}
+    .stay-strip{list-style:none;display:flex;gap:5px;margin:1.5rem 0;padding:0}
+    .stay-strip li{flex:var(--nights);min-width:0;background:var(--panel);border-top:4px solid var(--green);padding:.75rem .6rem;line-height:1.4}
+    .stay-strip li[data-type="train"]{border-color:var(--sun)}
+    .stay-strip b{display:block;font-size:.82rem;overflow-wrap:anywhere}
+    .stay-strip span{display:block;font-size:.7rem;color:var(--muted);margin-top:.3rem}
+    .lodging-head{display:flex;justify-content:space-between;gap:1.5rem;align-items:end;margin-top:3rem}
+    .lodging-head h3{font-family:var(--serif);font-size:1.8rem;margin-bottom:.5rem}
+    .lodging-head p{font-size:.87rem;color:var(--muted);margin-bottom:0}
+    .lodging-note{font-size:.8rem;color:var(--muted);margin:1rem 0}
+    .lodgings{list-style:none;margin:1.5rem 0 0;padding:0;border-top:1px solid var(--line)}
+    .stay{border-bottom:1px solid var(--line)}
+    .stay>summary{display:flex;align-items:center;gap:1rem;list-style:none;padding:1.2rem 0}
+    .stay>summary::-webkit-details-marker{display:none}
+    .stay>summary:after{content:"+";margin-left:auto;font-size:1.5rem}
+    .stay[open]>summary:after{content:"−"}
+    .stay-number{flex:0 0 2.4rem;font-size:.78rem;color:var(--muted)}
+    .stay-heading{flex:1;min-width:0}
+    .stay-heading strong{display:block;font-size:1.1rem}
+    .stay-heading span{display:block;font-size:.8rem;color:var(--muted)}
+    .night-badge{white-space:nowrap;font-size:.8rem;padding:.3rem .65rem;background:var(--panel);border-radius:4px}
+    .stay-body{padding:0 0 1.5rem 3.4rem}
+    .stay-body>p{font-size:.9rem}
+    .stay-options{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .stay-option{background:var(--panel);padding:1.2rem;border-radius:6px}
+    .stay-option h4{font-size:1rem;margin:.4rem 0 .65rem}
+    .stay-option p,.stay-option a{font-size:.84rem}
+    .stay-option p:last-child{margin-bottom:0}
+    .option-label{font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+    .stay-check{font-size:.8rem!important;color:var(--muted);margin:1rem 0 0}
+    .lodging-total{border:1px solid var(--line);padding:1rem 1.2rem;border-radius:6px;margin-top:1.5rem;font-size:.88rem}
+    .ticket{display:none}
+    .timeline{display:block;margin:0}
+    .day{border-left:0;margin:0;padding:0;border-bottom:1px solid var(--line)}
+    .day:last-child{border-bottom:0}
+    .day:before{display:none}
+    .day>details>summary{display:grid;grid-template-columns:4rem 1fr auto;align-items:center;gap:1rem;padding:1rem 1.2rem;list-style:none}
+    .day>details>summary::-webkit-details-marker{display:none}
+    .day>details>summary:after{content:"+";font-size:1.3rem}
+    .day>details[open]>summary:after{content:"−"}
+    .day-title{font-size:.94rem;font-weight:600}
+    .day-night{display:block;font-size:.78rem;font-weight:400;color:var(--muted);margin-top:.2rem}
+    .day-content{padding:0 1.2rem 1.2rem 6.2rem}
+    .day .tip{margin-bottom:0}
+    .notice{background:var(--panel);color:var(--ink);border-left:3px solid var(--line);font-size:.84rem}
+    .long-trip{background:var(--warn-bg);color:var(--warn)}
+    .cost-layout{grid-template-columns:1fr 1fr;gap:2rem}
+    .cost-table th:first-child{width:auto}
+    .cost-table th,.cost-table td{padding:.8rem;font-size:.8rem}
+    .budget-box{padding:1.5rem}
+    .budget-box .big-price{font-size:2.6rem;margin:1rem 0 .5rem}
+    #family-total{font-weight:700;font-size:1.25rem}
+    #treinen{padding:1rem 0}
+    .trains{display:block}
+    .train{max-width:800px}
+    .train img{height:300px}
+    .choice{background:var(--panel);padding:2rem}
+    #selection-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+    @media(max-width:1000px){.route-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.route-card img{height:210px}.route-content h3{min-height:0}.selected-hero{gap:1.5rem}.stay-strip{flex-wrap:wrap}.stay-strip li{flex:1 1 120px}.benefits{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){.hero{padding-top:2rem;gap:1.2rem}.hero-photo img{height:240px}.hero h1{font-size:3.3rem}.hero-copy>p:not(.eyebrow){font-size:.95rem}section{padding:2.5rem 0}.route-grid{gap:.75rem}.route-card img{height:135px}.route-content{padding:.8rem;gap:.6rem}.route-content h3{font-size:1.2rem;min-height:3rem}.route-content p{font-size:.78rem}.route-content .button{font-size:.75rem;min-height:44px}.route-price strong{font-size:.88rem}.route-content .route-facts{display:none}.mini-stays{font-size:.69rem}.route-card figcaption{padding:.35rem .8rem}.section-head{gap:1rem}.selected-hero{grid-template-columns:1fr;gap:1.5rem}.selected-hero img{height:230px}.route-summary{grid-template-columns:1fr 1fr;gap:1rem}.route-summary strong{font-size:1rem}.detail-nav{gap:1rem}.lodging-head{display:block}.stay>summary{gap:.5rem}.stay-number{flex-basis:1.5rem}.stay-heading strong{font-size:1rem}.night-badge{padding:.25rem .4rem;font-size:.72rem}.stay-body{padding-left:0}.stay-options{grid-template-columns:1fr}.day>details>summary{grid-template-columns:2.7rem 1fr auto;padding:1rem .7rem;gap:.5rem}.day-content{padding:0 .7rem 1rem 3.9rem}.day-num{font-size:.65rem}.cost-layout{grid-template-columns:1fr}.benefits{grid-template-columns:1fr}.disclosure-content{padding:1rem}.choice{padding:1.2rem}.train img{height:220px}.stay-strip li{flex:1 1 90px}.masthead nav{gap:.7rem}}
+    @media print{.masthead{position:static}.route-grid{grid-template-columns:1fr 1fr}.stay-strip{flex-wrap:wrap}.stay-strip li{flex:1 1 100px}.selected-hero{grid-template-columns:1fr 1fr}.disclosure,.stay{break-inside:avoid}.day-content{display:block}.detail-nav{display:none}}
+    :root{--paper:#f7f8fc;--ink:#172944;--muted:#53647b;--line:#d6deeb;--panel:#edf1f9;--green:#3155e7;--on-green:#fff;--sun:#ffbc59;--focus:#c44118}
+    @media(prefers-color-scheme:dark){:root{--paper:#111b30;--ink:#f4f6ff;--muted:#b3bfd5;--line:#354361;--panel:#1d2a45;--green:#526fee;--on-green:#fff;--focus:#ffbc59}}
+    body{background-image:radial-gradient(ellipse at 95% 0%,#6288f51c,transparent 45%);padding-bottom:90px}
+    .button{border-radius:14px;transition:transform .2s,box-shadow .2s;min-height:44px}
+    .button:hover{transform:translateY(-2px);box-shadow:0 8px 24px #3155e733}
+    .hero-photo{transform:rotate(2deg)}.hero-photo img{border-radius:32px;box-shadow:0 24px 70px #16377826}
+    .hero{padding:3rem 0 1rem}.hero h1{font-size:clamp(3rem,6vw,5.3rem)}
+    .hero-copy h1:after{content:"";display:block;width:110px;height:8px;border-radius:8px;background:var(--sun);margin-top:1rem}
+    .travel-modes{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+    .mode-card{position:relative;overflow:hidden;border:2px solid var(--line);border-radius:24px;background:var(--panel);color:var(--ink);padding:2rem;text-align:left;transition:transform .25s,border-color .25s;min-height:200px}
+    .mode-card:hover{transform:translateY(-5px)}
+    .mode-card[aria-pressed="true"]{border-color:var(--green);box-shadow:0 12px 35px #3155e722}
+    .mode-card strong{display:block;font-family:var(--serif);font-size:2rem;line-height:1.2;margin:.7rem 0}
+    .mode-card span{display:block;font-size:.9rem;max-width:40ch}.mode-card .mode-tag{font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem}
+    .mode-card:after{content:"→";position:absolute;right:1.5rem;bottom:1.3rem;font-size:2rem;color:var(--green)}
+    .mode-card[aria-pressed="true"]:after{content:"✓"}
+    #varianten .route-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .route-card{border-radius:22px;transition:transform .25s,box-shadow .25s}
+    .route-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px #16377818}
+    .route-card img{height:195px;transition:transform .6s}.route-card:hover img{transform:scale(1.025)}
+    .route-card[data-selected="true"]{outline:2px solid var(--green);outline-offset:3px}
+    .route-content h3{font-size:1.4rem;min-height:3.2rem}
+    .route-summary{background:var(--panel);border:0;border-radius:20px;padding:1.3rem;margin:1rem 0}
+    .selected-hero{animation:route-enter .45s ease-out}
+    @keyframes route-enter{from{opacity:.3;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .journey-board{border:1px solid var(--line);background:var(--panel);border-radius:24px;padding:1.5rem;margin:1.5rem 0}
+    .journey-heading{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .journey-heading h3{margin:0;font-family:var(--serif);font-size:1.7rem}
+    #animated-route{height:480px;margin:1rem 0;border-radius:20px;overflow:hidden;background:#bce4e7;color:#172944;font-family:"DM Sans",system-ui,sans-serif}
+    #animated-route svg{display:block;width:100%;height:100%;max-height:none;margin:0}
+    .map-country{stroke:#fff6e5;stroke-width:2;stroke-linejoin:round}
+    .map-country-name{fill:#506c66;font-size:16px;font-weight:700;letter-spacing:2px;pointer-events:none}
+    .map-sea-name{fill:#398990;font-size:19px;font-style:italic;letter-spacing:3px}
+    .map-route-shadow{fill:none;stroke:#fff;stroke-width:9;stroke-linejoin:round;opacity:.8}
+    .map-route-line{fill:none;stroke:#3155e7;stroke-width:4;stroke-dasharray:7 6;stroke-linejoin:round}
+    .map-place{cursor:pointer}.map-place:focus-visible{outline:none}
+    .map-place circle{fill:#fff;stroke:#3155e7;stroke-width:4}
+    .map-place rect{fill:#fff;stroke:#d6deeb;stroke-width:1}
+    .map-place text{fill:#172944;font-size:17px;font-weight:700}
+    .map-place:hover rect,.map-place:focus-visible rect,.map-place[aria-pressed="true"] rect{fill:#ffedb6;stroke:#3155e7;stroke-width:2}
+    .map-place line{stroke:#3155e7;stroke-width:1.5}
+    .map-vehicle{pointer-events:none}.map-vehicle circle{fill:#fff;stroke:#3155e7;stroke-width:2}.map-vehicle text{font-size:24px}
+    .map-popup{padding:1rem;background:var(--paper);border:1px solid var(--line);border-radius:14px;margin:1rem 0}
+    .map-popup strong{display:block}.map-popup button{margin:.5rem .5rem 0 0}
+    .journey-board{padding:1.6rem;background:linear-gradient(135deg,var(--panel),var(--paper));box-shadow:0 20px 70px #1729441c}
+    .journey-heading{margin-bottom:1rem}
+    .map-stage{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:1rem}
+    #animated-route{height:570px;margin:0;box-shadow:inset 0 0 30px #39899022}
+    .map-spotlight{min-width:0;border-radius:20px;background:var(--paper);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+    .map-spotlight .photo{animation:postcard-in .6s ease both}
+    .map-spotlight img{height:240px}
+    .map-spotlight figcaption{padding:.6rem 1rem;font-size:.68rem}
+    .map-spotlight-body{padding:1.2rem;flex:1}
+    .map-spotlight h4{font-family:var(--serif);font-size:1.9rem;line-height:1.15;margin:.5rem 0 .7rem}
+    .map-spotlight p{font-size:.88rem;margin:0 0 .8rem}
+    .map-spotlight .stop-badge{display:inline-block;border-radius:30px;background:var(--sun);color:#172944;padding:.3rem .75rem;font-weight:700;font-size:.8rem}
+    .map-tour-controls{display:flex;justify-content:space-between;align-items:center;gap:.5rem;padding:1rem;border-top:1px solid var(--line)}
+    .map-tour-controls button{padding:.5rem .8rem}
+    .map-tour-controls span{font-size:.78rem;font-weight:700}
+    .map-tour-progress{height:4px;background:var(--line);overflow:hidden;margin-top:1rem;border-radius:4px}
+    .map-tour-progress span{display:block;height:100%;background:var(--green);width:0}
+    .map-place .stop-halo{fill:#ffbc5933;stroke:#ffbc59;stroke-width:2;opacity:0;pointer-events:none}
+    .map-place[data-active="true"] .stop-halo{opacity:1;transform-box:fill-box;transform-origin:center;animation:stop-beacon 1.8s ease-out infinite}
+    .map-place[data-active="true"] rect{fill:#ffedb6;stroke:#3155e7;stroke-width:2}
+    .map-active-leg{fill:none;stroke:#f19636;stroke-width:5;stroke-linecap:round}
+    .map-cloud{opacity:.6;animation:cloud-drift 9s ease-in-out infinite alternate;pointer-events:none}
+    .map-wave-lines{animation:sea-shimmer 5s ease-in-out infinite alternate}
+    .map-vehicle{filter:drop-shadow(0 4px 4px #17294444)}
+    @keyframes postcard-in{from{opacity:.3;transform:translateY(10px) rotate(-1deg)}to{opacity:1;transform:none}}
+    @keyframes stop-beacon{from{transform:scale(.8);opacity:1}to{transform:scale(1.9);opacity:0}}
+    @keyframes cloud-drift{to{transform:translateX(18px)}}
+    @keyframes sea-shimmer{to{opacity:.45}}
+    :root[data-motion="paused"] .map-stage *{animation-play-state:paused!important}
+    :root[data-motion="paused"] .map-spotlight .photo,:root[data-motion="paused"] .map-spotlight-body{animation:none}
+    @media(max-width:1000px){.map-stage{grid-template-columns:1fr 1fr}.map-spotlight img{height:210px}}
+    @media(max-width:620px){.map-stage{grid-template-columns:1fr}#animated-route{height:380px}.map-spotlight img{height:200px}.map-spotlight h4{font-size:1.6rem}.journey-board{padding:1rem}}
+    .journey-board{position:relative;border-radius:32px;padding:2rem;background:#132440;color:#f4f6ff;border:1px solid #3c5274;box-shadow:0 30px 90px #13244040}
+    .journey-board>.small{color:#b7c8e1;margin:1rem 0}
+    .journey-heading h3{font-family:var(--serif);font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.035em}
+    .journey-heading .eyebrow{color:#f3c751;margin-bottom:.6rem}
+    .journey-heading .button{background:#ffffff0d;color:#f4f6ff;border-color:#63718b;font-size:.8rem}
+    .journey-board .journey-stops button{background:#1d3455;color:#f4f6ff;border-color:#405678;transition:background .25s,transform .25s}
+    .journey-board .journey-stops button span{color:#c4d2e6}
+    .journey-board .journey-stops button[data-active="true"]{background:#3155e7;border-color:#8ea5ff;transform:translateY(-3px)}
+    .map-spotlight{color:var(--ink);box-shadow:0 12px 35px #0003}
+    .map-spotlight img{height:290px;transition:transform .6s ease}
+    .map-spotlight:hover img{transform:scale(1.035)}
+    #map-stop-photo{overflow:hidden}
+    .map-spotlight-body{animation:postcard-in .5s ease-out both}
+    .map-tour-progress{background:#334d71}.map-tour-progress span{background:linear-gradient(90deg,#6c89ff,#ffcf70)}
+    .map-country{filter:drop-shadow(0 3px 1px #648c8d33)}
+    .map-route-line{animation:route-flow 1.6s linear infinite;filter:drop-shadow(0 2px 2px #3155e766)}
+    .map-vehicle{filter:drop-shadow(0 5px 5px #17294466)}
+    .map-vehicle circle{fill:#172944;stroke:#ffce70;stroke-width:3}
+    .map-decor text{font-family:var(--serif);fill:#537c7b}
+    .map-place .stop-halo{stroke:#ed9d37;stroke-width:3}
+    .atlas-caption{display:flex;align-items:center;justify-content:space-between;font-size:.72rem;color:#b7c8e1;letter-spacing:.1em;margin:0 0 1rem;gap:1rem}
+    .atlas-caption span:first-child{border:1px solid #63718b;padding:.3rem .6rem;border-radius:30px;color:#ffcf70}
+    @keyframes route-flow{to{stroke-dashoffset:-26}}
+    .journey-board:fullscreen{overflow:auto;padding:2rem;background:#132440}
+    .journey-board:fullscreen .map-stage{max-width:1500px;margin:auto}
+    .journey-board:fullscreen #animated-route{height:70vh}
+    @media(max-width:1000px){.journey-heading{align-items:start;flex-wrap:wrap}.map-spotlight img{height:230px}}
+    @media(max-width:620px){.journey-board{padding:1rem;border-radius:24px}.journey-heading h3{font-size:2rem}.map-stage{gap:1rem}.map-spotlight img{height:220px}.atlas-caption{font-size:.62rem}.journey-heading .map-actions .button{font-size:.7rem}.journey-board:fullscreen{padding:1rem}.journey-board:fullscreen #animated-route{height:45vh}}
+    .journey-heading .map-actions{display:flex;gap:.5rem;flex-wrap:wrap}
+    .cost-layout>.budget-box{grid-column:1;grid-row:1}.cost-layout>.disclosure{grid-column:2;margin-top:0}
+    #dagen .section-head{margin-bottom:1rem}#dagen h2{font-size:1.7rem}#dagen{padding:1.5rem 0}
+    .journey-stops{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem}
+    .journey-stops button{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:.8rem;color:var(--ink);text-align:left;min-height:64px}
+    .journey-stops button:hover{border-color:var(--green)}
+    .journey-stops b,.journey-stops span{display:block}.journey-stops span{font-size:.76rem;color:var(--muted)}
+    .coast-card{padding:0;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;background:var(--paper);border:2px solid var(--line)}
+    .coast-card[data-selected="true"]{border-color:var(--green);box-shadow:0 12px 35px #3155e722}
+    .coast-card figure img{height:220px}.coast-card figcaption{padding:.5rem 1rem}
+    .coast-card-body{padding:1.2rem;display:flex;flex-direction:column;flex:1}
+    .coast-card h3{font-family:var(--serif);font-size:1.6rem;margin:.5rem 0}
+    .coast-card .hotel-price{font-size:1rem;font-weight:700;margin:1rem 0}
+    .coast-card .hotel-pick{width:100%;margin-top:auto}
+    .coast-card details{margin:.8rem 0;font-size:.82rem}
+    .car-gallery{margin:1.5rem 0}.car-gallery>summary{font-weight:700;padding:1rem}
+    .car-gallery[open]{padding:0 1rem 1rem}
+    .stay-strip{display:none}
+    .decision-bar{position:fixed;bottom:0;left:0;right:0;z-index:6;background:var(--paper);border-top:1px solid var(--line);box-shadow:0 -6px 35px #16377815}
+    .decision-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
+    .decision-bar strong,.decision-bar span{display:block}.decision-bar span{font-size:.75rem;color:var(--muted)}
+    #stay-choice-label[hidden],#share-coast-label[hidden],[hidden]{display:none!important}
+    #coast-choice-box>label,#coast-choice-box>select{display:none}
+    @media(max-width:1000px){#varianten .route-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.coast-options{grid-template-columns:1fr 1fr}.coast-card:last-child{grid-column:1/-1}.coast-card:last-child figure img{height:240px}}
+    @media(max-width:620px){.travel-modes{grid-template-columns:1fr}.mode-card{min-height:155px;padding:1.4rem}.mode-card strong{font-size:1.7rem}.coast-options{grid-template-columns:1fr}.coast-card:last-child{grid-column:auto}.journey-board{padding:1rem}.journey-stops{grid-template-columns:1fr 1fr}.journey-heading h3{font-size:1.3rem}.journey-heading .button{padding:.5rem;font-size:.75rem}.journey-board svg{margin:.5rem 0}.decision-bar strong{font-size:.83rem}.decision-bar .button{padding:.7rem .8rem;font-size:.8rem}.hero-photo{transform:none}.route-card img{height:150px}.route-content h3{font-size:1.25rem}.cost-layout{display:flex;flex-direction:column}.cost-layout>.budget-box{order:-1;width:100%}.cost-layout>.disclosure{width:100%}}
+    @media(max-width:620px){#animated-route{height:360px}.journey-heading{align-items:start;flex-wrap:wrap}.journey-heading .map-actions{width:100%}}
+    @media(prefers-reduced-motion:reduce){.hero-photo{transform:none}}
+    @media print{body{padding-bottom:0}.decision-bar,.travel-modes,.journey-heading button{display:none}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Naar de inhoud</a>
+  <header class="masthead"><div class="wrap"><a class="brand" href="#">SAMEN WEG / 2027</a><nav aria-label="Hoofdnavigatie"><a href="#reiskeuze">Trein of auto</a><a href="#verblijven" id="sleep-nav">Slapen</a><a href="#kosten">Budget</a><a href="#kiezen">Kiezen</a></nav></div></header>
+  <main id="main" class="wrap">
+    <div class="hero">
+      <div class="hero-copy"><p class="eyebrow">De zomer van ons twaalf · Augustus 2027</p><h1>Samen weg.<br>Welk avontuur?</h1><p>Een trein door de Alpen of tien nachten aan de oceaan? Twee vakantiegevoelens, drie gezinnen. Minder koffers verhuizen. Meer tijd voor elkaar.</p><a class="button" href="#reiskeuze">Ontdek onze twee vakanties <span aria-hidden="true">↓</span></a></div>
+      <div id="hero-photo"></div>
+    </div>
+    <div class="stats" aria-label="Onze vakantie in het kort"><div><strong>3 gezinnen</strong><span>6 volwassenen + 6 kinderen</span></div><div><strong>13–14 dagen</strong><span>12–13 overnachtingen</span></div><div><strong>Maximaal 4 stops</strong><span>ook terugreisbuffers tellen</span></div><div><strong>Trein óf auto</strong><span>vier treinroutes + één autoroute</span></div><div><strong id="hero-budget">Budget volgt</strong><span>per gezin · ruwe raming</span></div></div>
+    <p class="small">Voorstel, geen boeking. Alle reistijden, prijzen en verbindingen voor augustus 2027 moeten nog worden gecontroleerd. Kinderprijzen hangen af van leeftijd en vervoerder.</p>
+    <noscript><p class="no-js">Schakel JavaScript in om de vijf routes, verblijfstops, foto's, kostenberekening en deelbare keuze te bekijken.</p></noscript>
+
+    <section id="waarom" aria-label="Waarom reizen we met de trein?"><details class="disclosure"><summary>Waarom de trein? De reis telt mee — met een paar praktische nadelen.</summary><div class="disclosure-content"><div class="benefits"><div><strong>De reis is vakantie</strong><p>Viaducten, bergpassen en samen naar buiten kijken.</p></div><div><strong>Niemand hoeft te rijden</strong><p>Geen files. Lange treindagen blijven wel lange dagen.</p></div><div><strong>Ruimte om samen te zijn</strong><p>Spelletjes en even bewegen, zonder doorgangen te blokkeren.</p></div><div><strong>Doorgaans minder uitstoot</strong><p>Een lagere klimaatimpact dan vliegen of meerdere auto's.</p></div></div><p class="small">We dragen onze eigen bagage, hebben overstappen en moeten vroeg boeken. Met twaalf personen leggen we de vervoersketen vooraf vast.</p></div></details></section>
+
+    <section id="reiskeuze"><p class="eyebrow">01 / Begin met het vakantiegevoel</p><h2>Avontuur onderweg<br>of uitpakken aan zee?</h2><div class="travel-modes" role="group" aria-label="Kies trein of auto"><button class="mode-card" type="button" data-mode="train" aria-pressed="true"><span class="mode-tag">14 dagen · 4 inchecks</span><strong>Het treinavontuur</strong><span>Bergen, mooie treinritten en een vaste vakantiebasis. Kies uit vier routes.</span></button><button class="mode-card" type="button" data-mode="car" aria-pressed="false"><span class="mode-tag">13 dagen · 3 inchecks</span><strong>Met de auto naar zee</strong><span>Tours als tussenstop, tien nachten oceaan. Kies uit drie kustverblijven.</span></button></div></section>
+    <section id="varianten"><div class="section-head"><div><p class="eyebrow">Trein / Kies jouw versie</p><h2>Vier routes.<br>Eén treinavontuur.</h2></div><p>Kies vooral wat jullie ter plaatse willen doen. De bergen zijn het begin; daarna blijven we langer op één basis. Alle routes: 14 dagen, vier inchecks, zonder huurauto.</p></div><div id="route-cards" class="route-grid"></div><details class="disclosure"><summary>De cijfers naast elkaar: reistijd, kinderen en budget</summary><div class="table-scroll" role="region" aria-label="Vergelijking van de vijf routes" tabindex="0"><table class="comparison"><caption class="small">Ruwe planningsramingen, geen offertes. Autoroute E duurt één dag minder.</caption><thead><tr><th scope="col">Route / duur</th><th scope="col">Totaal onderweg</th><th scope="col">Langste dag</th><th scope="col">Verblijfstops</th><th scope="col">Avontuur</th><th scope="col">12 personen</th><th scope="col">Met kinderen</th></tr></thead><tbody id="comparison-body"></tbody></table></div></details></section>
+
+    <section id="vakantie" aria-labelledby="selected-title">
+      <p class="eyebrow">02 / Eén route helemaal uitgelegd</p>
+      <div class="route-picker" role="group" aria-label="Kies de vakantie om uit te werken"><button type="button" data-route="A" aria-pressed="true"><b>A</b>Bernina &amp; Verona</button><button type="button" data-route="B" aria-pressed="false"><b>B</b>Boot &amp; kust</button><button type="button" data-route="C" aria-pressed="false"><b>C</b>Bergen &amp; Piemonte</button><button type="button" data-route="D" aria-pressed="false"><b>D</b>Slovenië &amp; zee</button><button type="button" data-route="E" aria-pressed="false"><b>E</b>Atlantisch · auto</button></div>
+      <div class="selected-hero"><div><p class="eyebrow" id="selected-label"></p><h2 id="selected-title" tabindex="-1"></h2><p id="selected-story"></p><div id="selected-tradeoffs" class="tradeoffs"></div></div><div id="destination-photo"></div></div>
+      <div id="route-summary" class="route-summary"></div>
+      <div id="coast-choice-box" hidden><h3>Tien nachten hier. Welk verblijf past bij ons?</h3><p>Kies één kaart. Route, nachten, budget en deeltekst veranderen meteen mee.</p><label for="coast-choice">Kustaccommodatie</label><select id="coast-choice"><option value="clara">Villa Clara · Anglet · appartementen</option><option value="kaliko">Kaliko · Bidart · hotel</option><option value="grand">Le Grand Hôtel de la Plage · Biscarrosse · hotel</option></select><div id="coast-options" class="coast-options"></div><p class="small">4–14 augustus 2027 · zes volwassenen en zes kinderen. Foto's zijn van de accommodatiepagina's; getoonde kamers zijn geen bevestigde groepsindeling. Budgetten zijn eigen ramingen, geen live prijzen.</p></div>
+      <div class="journey-board"><div class="journey-heading"><div><p class="eyebrow">Onze zomer, in beweging</p><h3>De reis begint hier.</h3></div><div class="map-actions"><button type="button" id="map-reset" class="button secondary">Hele kaart</button><button type="button" id="map-focus" class="button secondary">Route dichtbij</button><button type="button" id="map-fullscreen" class="button secondary">Groot bekijken ⤢</button><button type="button" id="motion-toggle" class="button secondary" aria-pressed="false">Pauzeer beweging</button></div></div>
+      <div class="atlas-caption"><span>DE VAKANTIEATLAS / 2027</span><span id="atlas-route-label"></span></div>
+      <div class="map-stage"><div id="animated-route" role="region" aria-label="Geïllustreerde vakantiekaart"></div><aside class="map-spotlight" aria-label="Fotokaart van de reisstop"><div id="map-stop-photo"></div><div id="map-stop-story" class="map-spotlight-body"></div><div class="map-tour-controls"><button type="button" id="map-previous" class="button secondary" aria-label="Vorige reisstop">←</button><span id="map-stop-counter"></span><button type="button" id="map-next" class="button secondary" aria-label="Volgende reisstop">→</button></div></aside></div>
+      <div class="map-tour-progress" aria-hidden="true"><span id="map-tour-progress"></span></div><div id="map-popup" class="map-popup" role="region" aria-label="Geselecteerde kaartstop" hidden></div><p class="small">De tour houdt bij iedere stop even halt. Klik zelf een plaats of gebruik de pijlen om rustig te kijken. Eigen geïllustreerde kaart met vereenvoudigde grenzen en indicatieve verbindingen, geen navigatie. Kaart en tour werken offline; foto's vragen internet.</p><div id="journey-stops" class="journey-stops"></div></div>
+      <details id="car-gallery" class="car-gallery disclosure" hidden><summary id="car-gallery-title">Meer van de kust en Tours bekijken</summary><div class="gallery-intro"><p>Bestemmingsfoto's: de omgeving en onze tussenstop, niet het hotel.</p><a id="selected-hotel-gallery" class="button secondary" target="_blank" rel="noopener noreferrer">Bekijk de echte hotelfoto's ↗</a></div><div id="car-gallery-grid" class="car-gallery-grid"></div></details>
+      <nav class="detail-nav" aria-label="Onderdelen van de geselecteerde route"><a href="#verblijven">Waar slapen we?</a><a href="#dagen">Dagplanning</a><a href="#kosten">Wat kost het?</a><a href="#kiezen">Deze route kiezen</a></nav>
+      <h3>De vakantie in slaapplaatsen</h3><p id="stay-count-note" class="small"></p>
+      <ol id="stay-strip" class="stay-strip" aria-label="Overnachtingen in reisvolgorde"></ol>
+      <p id="route-warning" class="notice"></p>
+      <details id="verblijven" class="disclosure"><summary>Bekijk verblijfsmogelijkheden &amp; wat we nog moeten controleren</summary><div class="disclosure-content"><p id="lodging-intro"></p>
+      <p class="lodging-note">Verblijfsscenario's en bekeken voorbeelden, geen geboekte kamers. Algemene zoeklinks hebben geen datums; de kustlinks bij E gebruiken 4–14 augustus en de aangeleverde leeftijden. Controleer twaalf slaapplaatsen, ligging en de volledige offerte.</p>
+      <ol id="lodgings" class="lodgings" aria-label="Verblijfsmogelijkheden per stop"></ol>
+      <div id="lodging-total" class="lodging-total"></div>
+      </div></details>
+      <div id="car-practical" class="notice" hidden><strong>Auto &amp; bagage:</strong> drie eigen gezinsauto's. Pak per gezin één kleine tas voor beide Toursnachten. Spreek pauzes af, wissel bestuurders waar mogelijk en controleer Franse milieuzones, vignetten, tol en parkeren vóór vertrek. Geen zichtbare bagage of waardevolle spullen in geparkeerde auto's laten.</div>
+      <p id="selection-status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="treinen" aria-label="Treinachtergrond bij de geselecteerde route"><details class="disclosure"><summary id="train-detail-label">Meer over de trein van deze route</summary><div class="disclosure-content"><p class="small">Panoramatreinen zijn extra's. Gewone treinen over dezelfde lijn kunnen goedkoper zijn. Alle tarieven en dienstregelingen voor 2027 moeten nog worden gecontroleerd.</p><div class="trains">
+      <article class="train"><div data-photo="bernina"></div><h3>Bernina Express</h3><p>Van Chur naar Tirano: stenen viaducten, gletsjerlandschap en uiteindelijk palmbomen. De RhB-route over Albula en Bernina staat op de UNESCO-werelderfgoedlijst.</p><dl><dt>Route</dt><dd>Chur → Tirano · variant A</dd><dt>Rit</dt><dd>Ongeveer 4–4½ uur in de trein; in de tijdlijn 5–6 uur met stations en aankomst.</dd><dt>Reservering</dt><dd>Verplicht in de panoramatrein. Referentie CHF 32–44 per persoon, boven op het vervoerbewijs; tarief voor 2027 controleren.</dd></dl><p><strong>Voor de kinderen:</strong> maak een bruggen- en tunnelbingo. De bekende route telt 55 tunnels en 196 bruggen.</p><p class="small"><strong>Tip:</strong> neem lunch mee en slaap die avond in Tirano. Zo hoeft de mooiste rit niet óók de zwaarste dag te worden.</p></article>
+      <article class="train"><div data-photo="boat"></div><h3>Gotthard Panorama Express</h3><p>Eerst een boot op het Vierwoudstedenmeer, daarna de historische Gotthardspoorlijn naar Lugano. Water en bergbochten in één reisdag.</p><dl><dt>Route</dt><dd>Luzern → Flüelen per boot → Lugano per trein · B</dd><dt>Rit</dt><dd>Ongeveer 5½ uur boot en trein; reken op 6–7 uur deur tot deur.</dd><dt>Reservering</dt><dd>Controleer zitplaatsreservering, toeslag en eersteklasvoorwaarden bij SBB. Geen bevestigd tarief voor 2027.</dd></dl><p><strong>Voor de kinderen:</strong> de afwisseling tussen dek en treincoupé breekt de dag op.</p><p class="small"><strong>Tip:</strong> controleer de seizoens- en weekdagen. Een gewone boot plus regionale trein is het alternatief, niet automatisch hetzelfde ticket.</p></article>
+      <article class="train"><div data-photo="glacier"></div><h3>Glacier Express, maar niet de hele dag</h3><p>Wij kiezen Andermatt → Zermatt. Bergdalen en grote ramen, zonder automatisch de volledige rit tussen Zermatt en St. Moritz van circa acht uur te boeken.</p><dl><dt>Route</dt><dd>Andermatt → Zermatt · variant C</dd><dt>Rit</dt><dd>Circa 3–3½ uur in de trein; 4–5 uur met aankomst en vertrek.</dd><dt>Reservering</dt><dd>Verplicht. Referentie circa CHF 54 per persoon; deeltraject, seizoen en 2027-tarief controleren. Treinticket apart.</dd></dl><p><strong>Voor de kinderen:</strong> een korter panoramadeel met daarna tijd om buiten te zijn.</p><p class="small"><strong>Tip:</strong> regionale treinen op dezelfde lijn zijn een prima budgetalternatief. De foto toont de Glacier Express op het Landwasserviaduct, buiten ons gekozen deeltraject.</p></article>
+      <article class="train"><h3>Slovenië met dagtreinen via München</h3><p>We overnachten in München op de heen- en terugweg. Daardoor hangt het voorstel niet af van een onbevestigde nachttrein en blijft het bij vier inchecks.</p><dl><dt>Route</dt><dd>België → München → Ljubljana, verder naar Piran met passende trein, bus en transfer.</dd><dt>Rit</dt><dd>München–Ljubljana circa 7–9 uur; Piran–München circa 10–13 uur met transfers. Dit zijn planningsramingen, geen bevestigde aansluitingen.</dd><dt>Boeken</dt><dd>Controleer SNCB International, DB, ÖBB en de Sloveense spoorwegen. Houd extra rekening met losse tickets en vervangbussen.</dd></dl><p class="small"><strong>Tip:</strong> alleen deze route boeken als de kust–München-etappe met buffers uitvoerbaar is. Een extra hotelnacht zou de grens van vier inchecks overschrijden; kies dan een andere route in plaats van ongemerkt een vijfde stop toe te voegen.</p></article>
+    </div></div></details></section>
+
+    <section id="dagen"><div class="section-head"><div><p class="eyebrow">03 / Het ritme van de reis</p><h2>En zo zien<br>de dagen eruit.</h2></div><p>De slaapplaatsen hierboven vormen de grote lijnen. Hieronder staan alle dagen van de gekozen route, inclusief reistijd en een kleine tip. Klik een dag open voor de uitleg.</p></div>
+      <details class="disclosure"><summary id="timeline-title">Bekijk de volledige dagplanning</summary><p id="timeline-summary" class="small disclosure-content"></p><ol id="timeline" class="timeline" aria-label="Dagplanning"></ol></details>
+    </section>
+
+    <section id="kosten"><div class="section-head"><div><p class="eyebrow">04 / Het budget van deze route</p><h2>Wat kost dit<br>ongeveer?</h2></div><p>Voor twaalf personen, inclusief slapen, eten en uitstapjes. Dit zijn planningsramingen, geen offertes. “Zuinig” betekent eenvoudige kamers en vaker zelf koken; “ruim” geeft meer comfort en speelruimte.</p></div><div class="cost-layout"><div><div class="table-scroll" role="region" aria-label="Kosten per post" tabindex="0"><table class="cost-table"><caption id="cost-caption"></caption><thead><tr><th scope="col">Post · 12 personen</th><th scope="col">Zuinig</th><th scope="col">Ruim</th></tr></thead><tbody id="cost-body"></tbody><tfoot><tr><th scope="row">Totaal</th><td id="cost-low"></td><td id="cost-high"></td></tr></tfoot></table></div><p id="night-breakdown" class="small"></p></div><aside class="budget-box" aria-label="Budgetcalculator"><label for="budget-slider">Hoe ruim plannen we?</label><input id="budget-slider" type="range" min="0" max="100" value="0" step="5"><div class="range-labels"><span>Zuinig</span><span>Ruim</span></div><output id="group-total" class="big-price" for="budget-slider"></output><p>voor ons allemaal</p><output id="family-total" for="budget-slider"></output><p class="small">Per gezin van vier. De verdeling is indicatief; leeftijd, kamers en eventuele kortingskaarten veranderen de werkelijke prijs.</p><p id="car-comparison" class="small"></p></aside></div><p class="small">Kinderprijzen, accommodaties en twaalf zit- of slaapplaatsen eerst bevestigen. Besparen kan met regionale treinen, eenvoudige kamers bij het station en zelf koken. De voorbeelden hierboven zijn niet afzonderlijk geprijsd.</p></section>
+
+    <section id="praktisch" aria-label="Praktische voorbereiding"><details class="disclosure"><summary>Voor we boeken: tickets, bagage, kinderen en nuttige websites</summary><div class="disclosure-content"><p>We reizen zonder huurauto. Ligging is dus belangrijker dan een mooie villa diep in de heuvels.</p><div class="practical">
+      <div><h3>Boeken als één puzzel</h3><p>Controleer eerst internationale treinen, panoramaplekken en accommodaties voor twaalf mensen. Boekbare treinen en hotels hebben verschillende openingsdata. Houd overstapbuffers aan en bekijk voorwaarden bij gemiste aansluitingen en losse tickets.</p></div>
+      <div><h3>Kinderen &amp; reserveringen</h3><p>Leeftijdsgrenzen en kortingen verschillen. Een gratis kinderticket betekent niet altijd een gratis gereserveerde stoel. Panoramawagons vragen reserveringen; gewone regionale treinen meestal niet.</p></div>
+      <div><h3>Minder bagage, meer vrijheid</h3><p>Elk gezin draagt zijn eigen spullen. Kies wasmogelijkheden, een kleine dagrugzak en snacks. Voor een nachttrein: water, ontbijt, oordoppen, slaapmasker en kleding binnen handbereik.</p></div>
+      <div><h3>Als iets uitverkocht is</h3><p>Probeer een regionale trein, een andere vertrekdag of familiekamers dicht bij elkaar. Voeg niet zomaar een extra nacht toe: herverdeel de 13 nachten. Voor D staat een dagtreinversie klaar.</p></div>
+      <div><h3>Augustus is augustus</h3><p>Warmte, volle stranden en drukke treinen horen erbij. Plan steden vroeg op de dag, een middagpauze en optionele uitstapjes. Bekijk reis- en annuleringsverzekering, medische dekking en Europese ziekteverzekeringskaart.</p></div>
+      <div><h3>Hier controleren we</h3><p><a href="https://www.b-europe.com/NL">SNCB International</a> voor de Belgische aanreis; <a href="https://www.sbb.ch/en">SBB</a>, <a href="https://www.rhb.ch/en/">RhB</a> en <a href="https://www.glacierexpress.ch/en/">Glacier Express</a> voor Zwitserland; <a href="https://www.trenitalia.com/en.html">Trenitalia</a> voor Italië; <a href="https://www.nightjet.com/en/">Nightjet</a> en <a href="https://www.europeansleeper.eu/">European Sleeper</a> voor nachten; <a href="https://potniski.sz.si/en/">Sloveense spoorwegen</a> en <a href="https://www.booking.com/">Booking</a> voor de rest.</p></div>
+    </div></div></details></section>
+
+    <section id="kiezen"><div class="choice"><div><p class="eyebrow">Laat weten wat jullie leuk vinden</p><h2>Deze zomer<br>doen we samen.</h2><p>Kies jullie favoriet en stuur hem naar de groep. Het is een voorkeur, geen boeking. Daarna controleren we samen kamers en tickets.</p></div><div><div class="fields">
+      <label>Onze favoriete vakantie<select id="choice-route"></select></label>
+      <label id="share-coast-label" hidden>Ons kustverblijf<select id="share-coast"><option value="clara">Villa Clara · appartementen in Anglet</option><option value="kaliko">Kaliko · hotel in Bidart</option><option value="grand">Le Grand Hôtel de la Plage · Biscarrosse</option></select></label>
+      <label id="stay-choice-label">Verblijf tijdens de langere stops<select id="stay-choice"><option>Drie appartementen dicht bij elkaar</option><option>Eén gedeeld vakantiehuis, als bereikbaar en beschikbaar</option><option>Geen voorkeur — eerst ligging en prijs bekijken</option></select></label>
+      <label>Ons maximumbudget per gezin (€)<input id="family-budget" type="number" min="0" step="100" placeholder="Bijvoorbeeld 6000" inputmode="numeric"></label>
+      <details><summary>Bekijk de tekst die je deelt</summary><label>Tekst om terug te sturen<textarea id="share-text" readonly></textarea></label></details>
+      </div><div class="actions"><button class="button" type="button" id="copy-choice">Kopieer voor WhatsApp</button><a class="button secondary" id="whatsapp-link" href="https://wa.me/" target="_blank" rel="noopener noreferrer">Open WhatsApp ↗</a></div><p id="copy-status" class="status" role="status" aria-live="polite"></p><p class="small">Deze pagina verstuurt niets en bewaart geen keuzes. WhatsApp deelt pas wanneer je zelf verzendt.</p></div></div></section>
+  </main>
+  <footer class="wrap"><p>Diepenbeek · augustus 2027 · een voorstel voor vrienden, geen reisaanbod.<br>Externe foto's en lettertypes vragen internet. Ons eigen kaartje, de routekeuze, slaapstops en calculator werken ook offline.</p></footer>
+  <aside class="decision-bar" aria-label="Jouw huidige vakantiekeuze"><div class="wrap"><div><strong id="decision-title"></strong><span id="decision-price"></span></div><a class="button" href="#kiezen">Dit lijkt ons leuk →</a></div></aside>
+  <script>
+    "use strict";
+    // Verified Commons file pages and licensing metadata; image crops are display-only.
+    const photos = {
+      bernina: {url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/RhB_ABe_4-4_III_mit_Bernina-Express_am_Lago_Bianco.jpg/1280px-RhB_ABe_4-4_III_mit_Bernina-Express_am_Lago_Bianco.jpg",source:"https://commons.wikimedia.org/wiki/File:RhB_ABe_4-4_III_mit_Bernina-Express_am_Lago_Bianco.jpg",artist:"David Gubler / Kabelleger",license:"CC BY-SA 3.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/3.0/",alt:"Rode Bernina Express langs het Lago Bianco in het hoge Alpenlandschap.",caption:"Bernina Express bij het Lago Bianco: dit uitzicht hoort bij de reis."},
+      coast: {url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Vernazza_panorama.jpg/1280px-Vernazza_panorama.jpg",source:"https://commons.wikimedia.org/wiki/File:Vernazza_panorama.jpg",artist:"СССР",license:"CC BY-SA 2.5 CA",licenseUrl:"https://creativecommons.org/licenses/by-sa/2.5/ca/",alt:"Vernazza met gekleurde huizen rond de haven aan de Ligurische kust.",caption:"Vernazza, een optionele treinuitstap vanuit Levanto."},
+      mountain: {url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/View_of_the_Matterhorn_from_Zermatt_village.jpg/1280px-View_of_the_Matterhorn_from_Zermatt_village.jpg",source:"https://commons.wikimedia.org/wiki/File:View_of_the_Matterhorn_from_Zermatt_village.jpg",artist:"TiagoSanchez",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Uitzicht vanuit Zermatt op de Matterhorn achter het dorp.",caption:"Zermatt en de Matterhorn: berglucht voordat we naar Piemonte trekken."},
+      sea: {url:"https://upload.wikimedia.org/wikipedia/commons/8/8c/Piran_panorama_-_panoramio.jpg",source:"https://commons.wikimedia.org/wiki/File:Piran_panorama_-_panoramio.jpg",artist:"Alen Ištoković",license:"CC BY 3.0",licenseUrl:"https://creativecommons.org/licenses/by/3.0/",alt:"Panorama van Piran aan de Sloveense Adriatische kust.",caption:"Piran: een kleine kuststad aan de Adriatische Zee."},
+      boat: {url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Steamers_Lucerne_November_2011.jpg/1280px-Steamers_Lucerne_November_2011.jpg",source:"https://commons.wikimedia.org/wiki/File:Steamers_Lucerne_November_2011.jpg",artist:"Gestumblindi",license:"CC0",licenseUrl:"https://creativecommons.org/publicdomain/zero/1.0/",alt:"Passagiersschepen bij Luzern op het Vierwoudstedenmeer.",caption:"Schepen bij Luzern; de foto is in november gemaakt. De precieze boot van onze reis ligt nog niet vast."},
+      glacier: {url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/RhB_Ge_4-4_II_614_Glacier_Express_on_Landwasser_Viaduct.jpg/1280px-RhB_Ge_4-4_II_614_Glacier_Express_on_Landwasser_Viaduct.jpg",source:"https://commons.wikimedia.org/wiki/File:RhB_Ge_4-4_II_614_Glacier_Express_on_Landwasser_Viaduct.jpg",artist:"David Gubler / Kabelleger",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Glacier Express op de stenen bogen van het Landwasserviaduct.",caption:"Glacier Express op het Landwasserviaduct. Dit ligt niet op het gekozen Andermatt–Zermatt-deel."},
+      night: {url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Nightjet_Wien_Hbf.jpg/1280px-Nightjet_Wien_Hbf.jpg",source:"https://commons.wikimedia.org/wiki/File:Nightjet_Wien_Hbf.jpg",artist:"Lukas3333",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Nightjet-trein aan het perron van Wien Hauptbahnhof.",caption:"Nightjet in Wenen; dit beeld bevestigt geen verbinding vanuit België in 2027."}
+    };
+    const rest = "Geen lange verplaatsing";
+    // Day shape: title, description, min/max hours (null on rest days), night, tip.
+    const routes = {
+      A: {name:"Bernina en een vaste basis in Verona",photo:"bernina",transport:"train",pros:["Bernina als echte reisetappe","Negen nachten zonder koffers verhuizen","Garda en Bologna als optionele daguitstappen"],cons:["Een lange eerste dag naar Chur","Zwembad bij een bereikbare Verona-basis is een zoekwens"],score:4,adventure:5,difficulty:"Vier inchecks · lange heenreis",warning:"Luzern en Bologna worden geen extra slaapplaatsen. De heenreis naar Chur is lang; boek alleen een haalbare verbinding. Negen nachten Verona betekent niet negen stadsdagen: rust, een zwembad indien gevonden en optionele uitstappen wisselen elkaar af.",costs:[["Internationale treinen heen en terug",2500,3600],["Overige treinen en daguitstappen",1000,1700],["Bernina-reserveringen · referentieraming",450,600],["4 nachten · 3 familiekamers",1800,2800],["9 nachten · 3 appartementen in Verona",4050,6300],["Eten en drinken",3000,4200],["Uitstapjes en lokale transfers",800,1500]],days:[
+        ["Rechtstreeks naar onze Alpenstop","Via passende Belgische en Zwitserse treinen naar Chur. Vandaag alleen reizen en inchecken.",[10,12],"Chur","Een kamer bij het station voorkomt een extra kofferrit."],
+        ["Chur op rustig tempo","Oude stad en een park; we slapen nog een nacht op dezelfde plek.",null,"Chur","Koop lunch voor de Bernina voordat de winkels sluiten."],
+        ["Over de Alpen naar Tirano","Bernina Express en daarna overnachten in Tirano; niet nog door naar Verona.",[5,6],"Tirano","Houd een kleine éénnachtstas klaar."],
+        ["Onze vaste Italiaanse basis","Via Milaan naar Verona. Hier blijven we negen nachten in dezelfde appartementen.",[6,8],"Verona","Vraag drie units bij elkaar, liefst met keuken en wasmachine."],
+        ["Verona en verder niets","Een eerste pleinwandeling en een lange middagpauze.",null,"Verona","Zoek airco en schaduw, niet een volle excursieagenda."],
+        ["Zwemmen of een rustige thuisdag","Zwembad indien beschikbaar bij het verblijf; anders een park en vrije tijd.",null,"Verona","Een zwembad is een zoekvoorwaarde, nog geen bevestigde voorziening."],
+        ["Een dagje Garda, zonder koffers","Optioneel trein naar Peschiera, een korte boottocht of zwemmen. Terug naar dezelfde basis.",[2,3],"Verona","De duur is voor vervoer heen en terug, niet de hele uitstap."],
+        ["Een dag zonder afspraken","Zelf koken, wassen, lezen en spelen.",null,"Verona","Laat ieder gezin vandaag zijn eigen tempo volgen."],
+        ["Bologna als daguitstap","Optioneel per trein naar Bologna voor markt en lunch; 's avonds terug.",[3,4],"Verona","Kies de koele ochtend en sla de uitstap over als de groep liever rust."],
+        ["Gardaland óf vrije tijd","Een optionele pretparkdag met trein en shuttle, of een rustige dag bij de basis.",[2,3],"Verona","Check kinderleeftijden, lengte-eisen en terugshuttle."],
+        ["Onze favoriete plek nog eens","Een rustige Verona-dag; niemand hoeft een nieuw hotel te zoeken.",null,"Verona","Laat de kinderen een vertrouwd plekje kiezen."],
+        ["Laatste volle vakantiedag","Vrije tijd en rustig inpakken voor de terugreis.",null,"Verona","Doe de boodschappen voor lunch in de trein."],
+        ["Terugreis met een buffer","Trein naar Basel, daar één nacht slapen.",[7,9],"Basel","Alleen de overnachtingstas gaat open."],
+        ["Thuis in Diepenbeek","Van Basel via België naar huis.",[7,9],"Thuis in Diepenbeek","Controleer de laatste lokale aansluiting."]
+      ]},
+      B: {name:"Bootreis en acht nachten Ligurische kust",photo:"coast",transport:"train",pros:["Boot en trein als heenreisavontuur","Acht nachten in dezelfde strandbasis","Cinque Terre en Genua zonder verhuisdag"],cons:["Lugano–Levanto is een lange reisdag","Cinque Terre blijft druk in augustus"],score:4,adventure:4,difficulty:"Vier inchecks · vaste strandbasis",warning:"Genua wordt een optionele daguitstap en Turijn verdwijnt als verblijf. Levanto is de enige kustbasis. Boot-, trein- en retourverbindingen voor 2027 moeten nog worden gecontroleerd.",costs:[["Internationale treinen heen en terug",2600,3800],["Overige treinen en bootbasis",1000,1600],["Gotthard-reservering / klasse / toeslag · budgetpost",400,700],["5 nachten · 3 familiekamers",2250,3500],["8 nachten · 3 appartementen in Levanto",3600,5600],["Eten en drinken",3000,4200],["Uitstapjes en lokale transfers",700,1300]],days:[
+        ["Op naar Luzern","Van Diepenbeek naar Luzern. Inchecken, eten en hooguit nog een wandeling.",[9,11],"Luzern","Neem iets te spelen mee dat ook op een klein treintafeltje past."],
+        ["Een brug, een meer, een ijsje","Luzern ontdekken op kindermaat. Vandaag geen lange excursie.",null,"Luzern","Bewaar de grote boottocht voor morgen."],
+        ["Boot wordt trein","Over het Vierwoudstedenmeer naar Flüelen en met de Gotthard Panorama Express naar Lugano.",[6,7],"Lugano","Pak een lichte trui voor het dek en zonnebescherming."],
+        ["Lugano, lekker rustig","Wandel door een park, zoek schaduw en zwem alleen op een geschikte toegankelijke plek.",null,"Lugano","Dit is twee nachten aan het meer, geen hele merenweek."],
+        ["We ruiken de zee","Via Milaan naar Levanto. De laatste transfer hangt af van de gekozen accommodatie.",[6,8],"Levanto","Boek op loopafstand van station en strand; niet diep in de heuvels."],
+        ["De eerste echte stranddag","Zwemmen, zand en een lange pauze. 's Avonds zelf koken.",null,"Levanto","Check vooraf vrije strandzones en kosten van strandbedden."],
+        ["Eén kustdorp is ook genoeg","Optioneel per lokale trein naar één of twee dorpjes van Cinque Terre. Geen verplicht wandeltraject.",null,"Levanto","Vertrek vroeg; draai om als de drukte niet fijn voelt."],
+        ["Nog niets afgesproken","Vrije stranddag en tijd om te wassen, lezen en spelen.",null,"Levanto","Laat de kinderen kiezen tussen strand en een rustige middag bij het verblijf."],
+        ["Genua als daguitstap","Optioneel per trein naar de haven en eventueel het aquarium; terug naar Levanto.",[3,5],"Levanto","Doe niet ook nog een hele stadswandeling; reistijd is heen en terug."],
+        ["We blijven gewoon hier","Een stranddag zonder koffers en zonder nieuw hotel.",null,"Levanto","Zoek een vrije strandzone of controleer de strandbedkosten."],
+        ["Een klein kustuitstapje","Optioneel een naburig dorp, verder tijd voor zee en schaduw.",null,"Levanto","Een korte lokale uitstap is genoeg."],
+        ["Laatste stranddag","Genieten en rustig inpakken op dezelfde plek.",null,"Levanto","Leg de overnachtingstas voor Basel apart."],
+        ["Terugreis door Zwitserland","Via passende treinen naar Basel. Een lange dag met een buffernacht.",[9,11],"Basel","Boek ruime overstappen en een hotel bij het station."],
+        ["Laatste etappe naar huis","Dagtreinen van Basel naar België en de lokale doorreis naar Diepenbeek.",[7,9],"Thuis in Diepenbeek","Geen bezoekprogramma vandaag. Houd eten en de laatste lokale aansluiting in het oog."]
+      ]},
+      C: {name:"Glacier Express en een vaste basis in Piemonte",photo:"mountain",transport:"train",pros:["Kort Glacier-traject met twee bergbases","Acht nachten op dezelfde Italiaanse plek","Turijn is een uitstap, geen extra incheck"],cons:["Lange eerste dag naar Andermatt","Zwembad én bereikbaarheid bij Alba nog niet gevonden"],score:3,adventure:4,difficulty:"Vier inchecks · ligging cruciaal",warning:"Om vier bagagestops te halen rijden we op dag 1 door naar Andermatt; dat is lang. Daarna Zermatt, één basis bij Alba en een Basel-buffer op de terugweg. De combinatie zwembad, prijs en bereikbaarheid in Piemonte blijft te bevestigen.",costs:[["Internationale treinen heen en terug",2500,3600],["Overige treinen Zwitserland en Italië",1200,1900],["Glacier-reserveringen · referentieraming",650,850],["5 nachten · 3 familiekamers",2500,3750],["8 nachten · 3 appartementen in Piemonte",3600,5600],["Eten en drinken",3000,4200],["Uitstapjes en lokale transfers",700,1600]],days:[
+        ["In één reisdag naar Andermatt","Via passende Belgische en Zwitserse treinen naar onze eerste bergbasis.",[11,13],"Andermatt","Controleer de haalbaarheid voordat je boekt; vandaag geen uitstap."],
+        ["Bergdag zonder prestatiedrang","Een korte wandeling, picknick en rust. We slapen op dezelfde plek.",null,"Andermatt","Houd de middag vrij."],
+        ["Panorama, in een behapbaar stuk","Glacier Express van Andermatt naar Zermatt. Niet het volledige achtuurstraject.",[4,5],"Zermatt","Neem zelf lunch mee als dat binnen de vervoersvoorwaarden mag."],
+        ["Zermatt onder de Matterhorn","Rustig het dorp verkennen. Een bergbaan is optioneel en afhankelijk van weer en budget.",null,"Zermatt","Boek geen dure berguitstap voordat je het weer kent."],
+        ["Naar onze vaste Piemonte-basis","Via Brig en Italië naar Alba of de gekozen bereikbare basis. Geen hotelwissel in Turijn.",[9,12],"Piemonte / Alba","Bevestig de laatste bus of taxi met de host."],
+        ["Zwembad en zelf koken","Rust bij het verblijf. Zwembad alleen als het daadwerkelijk beschikbaar is.",null,"Piemonte / Alba","Spreek af wie kookt; de anderen doen de boodschappen."],
+        ["Een klein lokaal uitstapje","Een markt of stadje in de buurt, als bereikbaar per voet of openbaar vervoer.",null,"Piemonte / Alba","Kies iets lokaals in plaats van een rondrit waarvoor een auto nodig is."],
+        ["Turijn zonder de koffers","Een optionele treinuitstap naar Turijn; terug naar dezelfde basis.",[4,6],"Piemonte / Alba","De rit heen en terug is niet kort; alleen doen als iedereen er zin in heeft."],
+        ["Vandaag blijven we thuis","Rust, zwemmen indien beschikbaar en zelf koken.",null,"Piemonte / Alba","Eén vaste basis maakt een losse dag per gezin mogelijk."],
+        ["Alba op ons tempo","Markt, een ijsje en vrije tijd, zonder verhuisdag.",null,"Piemonte / Alba","Controleer de lokale bus, of kies iets op loopafstand."],
+        ["Vandaag mag niets","Nog één echte rustdag op dezelfde plek.",null,"Piemonte / Alba","Doe de was en pak rustig in, niet op het laatste moment."],
+        ["De laatste dag in Piemonte","Een rustig laatste bezoek of gewoon nog een zwembadmiddag.",null,"Piemonte / Alba","Zet de overnachtingstas apart."],
+        ["Terug naar Basel","Van Piemonte via de passende Italiaanse en Zwitserse treinen naar Basel.",[8,10],"Basel","Plan een eenvoudige avondmaaltijd bij het station."],
+        ["Laatste halte: Diepenbeek","Trein naar België en het laatste stukje naar huis.",[7,9],"Thuis in Diepenbeek","Laat iedereen één favoriet moment vertellen."]
+      ]},
+      D: {name:"Slovenië en zee via München",photo:"sea",transport:"train",pros:["Zes nachten Ljubljana op één plek","Vijf nachten kust zonder verhuizen","Een München-buffer in beide richtingen"],cons:["Lange ritten naar Slovenië en terug","Piran–München vraagt zorgvuldig geplande transfers"],score:3,adventure:4,difficulty:"Vier inchecks · lange verbindingen",warning:"Wenen en Graz vervallen als hotelstops. We kiezen dagtreinen via München om niet van onbevestigde nachttreinen afhankelijk te zijn. München telt twee keer als incheck: in totaal vier bagagestops. Controleer vooral de lange kust–München-etappe.",costs:[["Internationale treinen heen en terug",2800,4200],["Overige treinen en bussen",900,1500],["2 nachten · 3 familiekamers in München",800,1300],["11 nachten · 3 appartementen",4400,7150],["Eten en drinken",2800,4000],["Uitstapjes en kusttransfers",800,1500]],days:[
+        ["Eerste halte München","Via passende internationale treinen naar München. Eén nacht vlak bij het station.",[8,10],"München","Een kleine overnachtingstas houdt de koffers dicht."],
+        ["Door naar Ljubljana","Via Oostenrijk naar onze Sloveense stadsbasis. Hier slapen we zes nachten.",[7,9],"Ljubljana","Controleer overstappen en werkzaamheden voor 2027."],
+        ["Langs de rivier","Ljubljana, terrasjes en een ontspannen wandeling.",null,"Ljubljana","De rivier is een leuke wandelroute, niet ons zwemadres."],
+        ["Bled als optionele daguitstap","Met passende bus of trein naar Bled en terug; de koffers blijven liggen.",[3,5],"Ljubljana","Dit is de vervoerduur heen en terug; maak de dag niet verder vol."],
+        ["Een dag zonder afspraken","Rust in de stadsbasis en zelf koken.",null,"Ljubljana","Zoek een appartement met airco en wasmachine."],
+        ["Park en een lokale uitstap","Een rustige dag in en rond Ljubljana.",null,"Ljubljana","Niet elk gezin hoeft altijd hetzelfde te doen."],
+        ["Laatste dag in Ljubljana","Een favoriet plekje opnieuw bezoeken en rustig voorbereiden op zee.",null,"Ljubljana","We verhuizen morgen, niet vandaag."],
+        ["Naar de Adriatische Zee","Trein naar Koper als passend beschikbaar, anders bus; daarna lokale bus of vooraf geboekte transfer naar Piran.",[3,5],"Sloveense kust / Piran","Kies een verblijf dicht bij bus, boodschappen en geschikte zwemtoegang."],
+        ["Zwemmen en rust","Een dag aan zee zonder excursieprogramma.",null,"Sloveense kust / Piran","Veel zwemtoegang is steen of beton, niet een breed zandstrand."],
+        ["Een kustplaatsje, verder niets","Piran verkennen, een ijsje en nog wat zee.",null,"Sloveense kust / Piran","Begin vroeg en zoek tijdens de heetste uren schaduw."],
+        ["Nog een dag zee","Vrije tijd op dezelfde kustbasis.",null,"Sloveense kust / Piran","Controleer waar veilig zwemmen mogelijk is."],
+        ["Laatste kustdag","Rustig afronden en bagage klaarmaken voor de lange terugetappe.",null,"Sloveense kust / Piran","Bevestig de vroege transfer vóór vertrek."],
+        ["Terug naar München","Lokale transfer en passende internationale treinen naar München; geen extra stop in Wenen.",[10,13],"München","Alleen boeken als deze etappe met voldoende buffers haalbaar is."],
+        ["Thuis in Diepenbeek","Trein van München naar België en naar huis.",[8,10],"Thuis in Diepenbeek","De laatste overstap verdient ook een buffer."]
+      ]}
+    };
+    const routePresentation = {
+      A:{short:"Bernina & vaste Italiëbasis",feel:"Panoramatrein + Verona · met de trein",story:"Twee nachten Chur, de Bernina naar één nacht Tirano en daarna negen nachten Verona. Vanuit één appartementbasis kiezen we tussen rust, een Garda-dag, Bologna of Gardaland. Een Baselovernachting breekt de terugreis. Vier inchecks, zonder een week aan een meer te verblijven.",highlights:["Chur · 2 nachten","Tirano · 1 nacht","Verona · 9 nachten + Basel 1"],stayIntro:"Familiekamers voor Chur, Tirano en Basel. In Verona blijven de drie gezinnen negen nachten in dezelfde appartementen; zoek een zwembad alleen waar ligging en budget passen."},
+      B:{short:"Boot & Ligurische kust",feel:"Bootreis + vaste strandbasis · trein",story:"Twee nachten Luzern, twee nachten Lugano na de boot- en treinreis, daarna acht nachten Levanto. Cinque Terre en Genua zijn optionele daguitstappen zonder koffers. Terug via één nacht Basel: vier inchecks, één kustbasis.",highlights:["Luzern · 2 nachten","Lugano · 2 nachten","Levanto · 8 nachten + Basel 1"],stayIntro:"Familiekamers in Luzern, Lugano en Basel. Drie appartementen bij elkaar in Levanto voor acht nachten, zodat iedereen kan uitpakken en zelf koken."},
+      C:{short:"Bergen & Piemonte",feel:"Glacier Express + vaste rustbasis · trein",story:"Twee nachten Andermatt en twee nachten Zermatt, daarna acht nachten op één bereikbare plek bij Alba. Turijn is hooguit een daguitstap. Eén nacht Basel breekt de terugweg. Vier inchecks; een zwembad in Piemonte blijft een zoekwens, geen bevestigd aanbod.",highlights:["Andermatt · 2 nachten","Zermatt · 2 nachten","Piemonte · 8 nachten + Basel 1"],stayIntro:"Familiekamers tijdens de vijf berg- en tussenstopnachten; drie appartementen bij elkaar tijdens acht nachten Piemonte. Eerst de ligging en transfer bevestigen."},
+      D:{short:"Slovenië & Adriatische zee",feel:"Stad + zee · met de trein",story:"Via één nacht München rijden we naar zes nachten Ljubljana en vijf nachten Piran. Bled is een daguitstap. Op de terugweg slapen we opnieuw één nacht in München. Vier inchecks in drie plaatsen, zonder tussenhotels in Wenen of Graz.",highlights:["München · 1 + 1 nacht","Ljubljana · 6 nachten","Piran · 5 nachten"],stayIntro:"Drie familiekamers in München, drie appartementen in Ljubljana en aan de kust. Een terugkeer naar München telt als een aparte bagagestop."},
+      E:{short:"Atlantische kust met de auto",feel:"Eén kustverblijf · 13 dagen",story:"Van 3 tot 15 augustus rijden we met drie gezinsauto's naar de Atlantische kust. Tours breekt de rit in beide richtingen. Van 4 tot 14 augustus slapen we tien nachten op één plek: Kaliko, Villa Clara óf Le Grand Hôtel de la Plage. De accommodaties zijn alternatieven, geen rondreis langs drie hotels.",highlights:["Tours · 1 nacht heen","Kust · 10 nachten","Tours · 1 nacht terug"],stayIntro:"Twee korte hotelstops in Tours en één kustverblijf voor tien nachten. Kies hieronder één van de drie accommodaties; vraag eerst een passende groepsindeling en offerte."}
+    };
+    const lodgingPlaces = {
+      "Luzern":{area:"Zoek rond Luzern Bahnhof of op een directe korte buslijn. Het meer en de oude stad zijn dan makkelijk bereikbaar.",activity:"Meerwandeling, Kapellbrücke en een rustige eerste vakantiedag.",options:[["Drie familiekamers","Eén kamer voor 2 volwassenen + 2 kinderen per gezin. Handig voor een korte stop; ontbijt erbij kan fijn zijn."],["Drie studio's of appartementen","Meer eigen ruimte en een kitchenette. Vraag of de units in hetzelfde gebouw liggen en of twee nachten mogelijk zijn."]],check:"Controleer bedindeling, bagageopslag en de afstand met koffers."},
+      "Chur":{area:"Zoek bij Chur Bahnhof of tussen station en oude stad, zodat de Bernina na onze rustdag eenvoudig begint.",activity:"Twee nachten om te landen na de lange heenreis en een rustige stadsdag te hebben.",options:[["Drie familiekamers voor twee nachten","Een eenvoudige kamerbasis bij het station; ligging telt meer dan luxe."],["Een aparthotel met drie units","Handig als familiekamers schaars zijn. Bevestig vier echte slaapplaatsen per gezin."]],check:"Bedindeling, airco indien nodig, ontbijt en bereikbaarheid met koffers."},
+      "Tirano":{area:"Zoek op loopafstand van het RhB-station en het Italiaanse treinstation.",activity:"Na de Bernina inchecken, eten en verder niets hoeven.",options:[["Drie hotel- of B&B-familiekamers","Eenvoudig overnachten na de bergreis, zonder extra transfer."],["Drie appartementen voor één nacht","Kan meer ruimte geven, maar éénnachtverhuur en late aankomst moeten toegestaan zijn."]],check:"Check aankomstprocedure en bagageopslag; niet nog een rit de vallei in."},
+      "Peschiera del Garda":{area:"Zoek in Peschiera tussen station, centrum en meer. Een resort buiten het centrum vraagt een gecontroleerde transfer.",activity:"Drie nachten voor zwemmen, zelf koken en een boottocht óf Gardaland.",options:[["Drie appartementen in één residence","De praktische basis: eigen keuken, samen eten en units liefst bij elkaar. Een zwembad is een extra zoekfilter, geen zekerheid."],["Drie vaste bungalows op één terrein","Samen buiten zitten en zelf koken. Geen reizende mobilhome: alleen een vast verblijf, als dat bij ons past."]],check:"Controleer transfer, zwembadopening, airco, minimumverblijf en ligging van de drie units.",example:{name:"Campeggio del Garda",url:"https://www.campeggiodelgarda.eu/en/",text:"De officiële site noemt bungalows in Peschiera. Vraag specifiek naar drie vaste bungalows voor elk vier personen, de transfer vanaf het station en een verblijf van drie nachten."}},
+      "Verona":{area:"Zoek op een directe buslijn vanaf Porta Nuova, liefst met station, boodschappen en stad goed bereikbaar.",activity:"Negen nachten op één basis: rust, Verona en optionele daguitstappen naar Garda, Bologna of Gardaland.",options:[["Drie appartementen met keuken","De budgetbasis voor negen nachten: uitpakken, zelf koken en wassen. Kies units in hetzelfde gebouw of heel dicht bij elkaar."],["Een bereikbare residence met zwembad","Een alternatief voor extra zwem- en rustdagen. Het zwembad is een zoekwens; een afgelegen villa zonder auto past niet."]],check:"Airco, wasmachine, twaalf bedden, zwembadvoorwaarden en busverbinding. Zwembad niet als gegarandeerd presenteren."},
+      "Bologna":{area:"Zoek tussen Bologna Centrale en het centrum, of bij een directe busverbinding.",activity:"Drie nachten voor de markt, pasta, pleinen en een vrije dag.",options:[["Drie appartementen met keuken","Dit is de budgetbasis: koken, wassen en een rustige middag thuis."],["Een aparthotel met drie gezinsunits","Minder losse hosts en makkelijker gezamenlijk inchecken. Controleer keukenuitrusting en bedindeling."]],check:"Zwembad is hier geen standaardvoorziening. Controleer airco, wasmachine en nachtelijk geluid."},
+      "Basel":{area:"Zoek dicht bij Basel SBB. De bedoeling is een makkelijke aankomst en vertrek, niet een uitgebreide stadsstop.",activity:"Een terugreisbuffer, een eenvoudige maaltijd en op tijd naar bed.",options:[["Drie familiekamers bij het station","Praktisch voor één nacht. Vraag vier slaapplaatsen per kamer, niet alleen een maximumbezetting."],["Drie aparthotelunits","Een alternatief als familiekamers niet passen; bevestig dat één nacht mogelijk is."]],check:"Bij twee afzonderlijke Baselstops moeten beide data beschikbaar zijn; dezelfde stad betekent twee inchecks."},
+      "Lugano":{area:"Zoek bij een bruikbare bus- of funicularverbinding tussen het hoger gelegen station en de stad.",activity:"Twee nachten voor park, meer en een rustdag na boot en trein.",options:[["Drie studio's of appartementen","Een kitchenette houdt de Zwitserse eetkosten beter onder controle."],["Drie familiekamers in een hotel","Meer gemak met ontbijt. Vraag een complete prijs inclusief kinderen en toeristenbelasting."]],check:"Controleer hoogteverschil en transfer met koffers; zwemmen is alleen op geschikte plekken."},
+      "Levanto":{area:"Zoek in het dorp, tussen station en strand. Een accommodatie op een heuvel kan een transfer nodig maken.",activity:"Acht nachten op dezelfde strandbasis; Cinque Terre en Genua zijn optionele daguitstappen.",options:[["Drie appartementen dicht bij elkaar","De basis voor acht nachten: keuken, airco en te voet naar strand en boodschappen."],["Drie passende hotelkamers of suites","Meer comfort en minder zelf koken. Vraag vier slaapplaatsen per gezin; niet elke suite is geschikt."]],check:"Hotels zijn alternatieven voor het appartementenbudget, geen gelijk geprijsde vervanging.",example:{name:"Villa Margherita / Park Hotel Argento",url:"https://www.villamargherita.net/en/",text:"Villa Margherita noemt kamers en suites met airco. Park Hotel Argento ligt in de heuvels en noemt wellness en een whirlpool; verifieer gezinskamers, transfer en kinderregels.",secondUrl:"https://www.parkhotelargento.com/en/",secondName:"Park Hotel Argento"}},
+      "Genua":{area:"Zoek bij openbaar vervoer naar de oude haven en Piazza Principe, niet alleen op de mooiste straatfoto.",activity:"Drie nachten voor de haven, optioneel het aquarium en een vrije dag.",options:[["Drie stadsappartementen","Keuken en ruimte om 's middags thuis te zijn. Kies één gebouw of dezelfde buurt."],["Een aparthotel of drie familiekamers","Handig voor gezamenlijke aankomst. Minder zelf koken kan de eetkosten verhogen."]],check:"Veel gebouwen hebben trappen; controleer lift, airco en bereikbaarheid met bagage."},
+      "Turijn":{area:"Zoek bij Porta Nuova of Porta Susa, afhankelijk van de geboekte treinen, met goede toegang tot centrum en park.",activity:"Een korte tussenstop bij B; bij C drie nachten voor stad, markt en vrije tijd.",options:[["Drie familiekamers","Voor één nacht de eenvoudige optie. Voor drie nachten: controleer voldoende ruimte om te ontspannen."],["Drie appartementen of aparthotelunits","Voor drie nachten vaak prettiger: een keuken, eigen zithoek en eventueel wasmogelijkheden."]],check:"De verblijfsduur verschilt per route. Voer de juiste in- en uitcheckdag in."},
+      "Andermatt":{area:"Zoek in het dorp met een haalbare route naar het station, niet in een bergresort waarvoor extra vervoer nodig is.",activity:"Twee nachten met een korte wandeling en de start van de Glacier Express.",options:[["Drie familiekamers","Een compacte bergbasis met ontbijt. Vraag vier bedden en voldoende ruimte voor bagage."],["Drie vakantieappartementen","Meer eigen ruimte en zelf koken. Controleer of twee nachten toegestaan zijn."]],check:"Houd dure bergbanen optioneel; minimumverblijf kan het appartementenaanbod beperken."},
+      "Zermatt":{area:"Zoek in het dorp, met een haalbare looproute of toegestane lokale transfer vanaf het station.",activity:"Twee nachten voor het dorp, berglucht en een optionele weerafhankelijke berguitstap.",options:[["Drie appartementen of studio's","Zelf koken helpt in deze dure bestemming. Controleer twee nachten en vier slaapplaatsen."],["Drie familiekamers","Eenvoudiger service en ontbijt, maar vergelijk de totale gezinsprijs; geen luxe resort nodig."]],check:"Zermatt is autovrij. Een adres boven het dorp kan alsnog een lastige kofferrit betekenen."},
+      "Piemonte / Alba":{area:"Alba is de zoekbasis. Kies voorzieningen op loopafstand of een bevestigde bus/taxitransfer, niet automatisch een afgelegen landhuis.",activity:"Acht nachten zelf koken, rust, een lokale markt en een zwembad als zoekwens. Turijn kan als daguitstap.",options:[["Drie units in een bereikbare residence","Keuken en units bij elkaar voor acht nachten. Zwembad gewenst, maar bereikbaarheid telt zwaarder."],["Een gedeeld huis voor twaalf met zwembad","Alleen een optie met twaalf echte bedden, boodschappen dichtbij en een uitvoerbare transfer."]],check:"Geen pand bevestigd. Als zwembad en autovrije bereikbaarheid niet samen lukken, kies een andere basis zonder extra hotelstop."},
+      "Wenen":{area:"Zoek bij Hauptbahnhof of op een directe metrolijn, ook voor de terugreisbuffer.",activity:"Twee nachten Wenen aan het begin en één buffernacht na de kust.",options:[["Drie familiekamers","Praktisch bij station of metro. De terugreisnacht blijft staan, ook met de nachttrein."],["Drie aparthotelunits","Een keuken is fijn tijdens de eerste twee nachten. Check de aparte terugreisboeking."]],check:"Bagageopslag is niet hetzelfde als vroege check-in. Vraag beide apart na."},
+      "Graz":{area:"Zoek op een directe tramverbinding tussen Hauptbahnhof en centrum.",activity:"Twee nachten met oude stad, park en een rustige dag.",options:[["Drie familiekamers","Een eenvoudige stadsbasis met een bereikbare ontbijtplek."],["Drie appartementen","Meer leefruimte en eigen ontbijt. Vraag een verblijf van twee nachten en units dichtbij elkaar."]],check:"Controleer de laatste tram, bedindeling en eventuele stadsbelasting."},
+      "Ljubljana":{area:"Zoek tussen station en centrum of op een eenvoudige buslijn. Bled blijft een daguitstap.",activity:"Zes nachten op één stadsbasis: rivierwandeling, park, rust en optioneel Bled.",options:[["Drie stadsappartementen","Keuken en wasmogelijkheden voor zes nachten. De praktische basis van de raming."],["Een aparthotel met drie units","Gezamenlijk inchecken en meer service, mits units echt geschikt zijn voor vier."]],check:"Airco, keuken, twaalf bedden en de aansluitingen voor Bled en de kust."},
+      "Sloveense kust / Piran":{area:"Zoek in Piran op een haalbare afstand van de bus en geschikte zwemtoegang. Transfers met koffers blijven belangrijk.",activity:"Vijf nachten op één plek voor zwemmen, een kustwandeling en rust.",options:[["Drie appartementen in dezelfde buurt","Eigen keuken en voldoende ruimte voor vijf nachten. Kies bereikbaarheid en zwemtoegang, niet alleen zeezicht."],["Hotelkamers aan zee","Meer service als alternatief. Vraag familiekamers of gekoppelde kamers; geen eigen keuken veronderstellen."]],check:"Veel zwemtoegang is steen of beton. Controleer airco en vooral de lange transfer/treinketen naar München.",example:{name:"Hotel Piran",url:"https://eh.si/hotel-piran/",text:"De officiële site vermeldt een hotel aan zee in het historische centrum en ontbijt. Vraag naar kamers voor drie gezinnen; twaalf bedden en prijzen zijn niet bevestigd."}},
+      "München":{area:"Zoek bij München Hauptbahnhof; de trein van de volgende dag moet eenvoudig bereikbaar zijn.",activity:"Een reisonderbreking in beide richtingen, met hooguit een korte wandeling of park.",options:[["Drie familiekamers bij het station","Een praktische éénnachtstop. Vraag vier slaapplaatsen per gezin en reserveer beide data."],["Drie aparthotelunits","Een alternatief met meer ruimte, mits één nacht en twaalf slaapplaatsen mogelijk zijn."]],check:"Beide verblijfsdata, bedindeling en late aankomst. Dit zijn twee inchecks, ook in hetzelfde hotel."},
+      "Tours":{area:"Zoek een hotel in of bij Tours met voldoende parking voor drie auto's. Centrum of een korte rit naar de Loire is fijn; de A10-route houdt de omweg beperkt.",activity:"Een korte Loirewandeling en eten rond Place Plumereau. Op de terugweg alleen als er nog energie is; geen groot kasteelprogramma na een lange rit.",options:[["Drie familiekamers met parking","Onze eerste keuze: één nacht op 3 augustus én één op 14 augustus. Laat de grote koffers zo veel mogelijk dicht, maar geen zichtbare spullen in de auto."],["Drie aparthotelunits met parking","Een kitchenette kan handig zijn voor ontbijt. Controleer toegang, parkeren en éénnachtverhuur op beide data."]],check:"Twaalf bedden, drie parkeerplaatsen, ontbijt en late check-in op beide data. Kinderen zijn 14, 14, 14, 12, 9 en 9: de verdeling per kamer moet bevestigd worden.",example:{name:"Château Belmont · hotel en residence",url:"https://www.chateaubelmont.com/fr/hotel-4-etoiles-tours.html",text:"De officiële site noemt een viersterrenhotel en residence in Tours, met kitchenettes in de residencekamers. Een comfortalternatief: vraag familiekamers/units voor twaalf en parking; deze optie kan de eenvoudige Tours-budgetreserve overschrijden.",secondUrl:"https://www.tours-tourisme.fr/",secondName:"Korte uitstap in Tours"}}
+    };
+    const coastChoices = {
+      kaliko:{name:"Kaliko",town:"Bidart",drive:[6,8],url:"https://www.booking.com/hotel/fr/kaliko.nl.html",type:"Hotel met restaurant",description:"Booking vermeldt een buitenzwembad, kamers met airco en een restaurant in Bidart. Geen eigen keuken veronderstellen.",rooms:"Vraag drie bevestigde vierpersoonskamers of een andere indeling met twaalf bedden. Drie standaardkamers zijn niet vanzelf genoeg.",check:"Kamercapaciteit met tieners, parkeren, zwembadvoorwaarden, ontbijt en totaalprijs voor tien nachten.",trip:"Biarritz of een Baskisch kustplaatsje; een korte uitstap, geen nieuw hotel.",costs:[["10 nachten · hotelkamers voor 12 · budgetreserve",7000,14000],["Eten en drinken · hotelversie",3500,5000]]},
+      clara:{name:"Villa Clara",town:"Anglet",drive:[6,8],url:"https://www.booking.com/hotel/fr/villa-clara.nl.html",type:"Residence met appartementen",description:"Booking vermeldt gemeubileerde appartementen met eigen keuken, airco, buitenzwembad en gratis privéparkeren, bij het strand van Cavaliers in Anglet.",rooms:"Vraag drie appartementen voor elk vier personen, liefst dicht bij elkaar. De naam Villa Clara betekent niet één privévilla voor twaalf.",check:"Bedden versus slaapbanken, ligging van de drie units, keukenuitrusting, schoonmaak, borg en totaalprijs.",trip:"Bayonne of Biarritz, met terugkeer naar dezelfde appartementen.",costs:[["10 nachten · 3 appartementen · budgetreserve",4500,8000],["Eten en drinken · deels zelf koken",2600,3800]]},
+      grand:{name:"Le Grand Hôtel de la Plage",town:"Biscarrosse",drive:[5,7],url:"https://www.booking.com/hotel/fr/le-grand-de-la-plage.nl.html",type:"Viersterrenhotel aan het oceaanstrand",description:"De officiële site situeert dit hotel in Biscarrosse, op de duin bij de oceaan, en vermeldt een restaurant en verschillende kamertypes.",rooms:"Vraag een volledige indeling voor twaalf personen. De aangeleverde zoeklink bevat meerdere kamerblokken: we rekenen niet automatisch op drie familiekamers.",check:"Aantal benodigde kamers, leeftijdsregels, ontbijt, parkeren en volledige groepsprijs; keuken niet veronderstellen.",trip:"Een optionele Dune du Pilat-uitstap; de officiële site noemt circa twintig minuten rijden, maar augustusverkeer kan dit verlengen.",official:"https://www.legrandhoteldelaplage.fr/",costs:[["10 nachten · hotelkamers voor 12 · budgetreserve",9000,16000],["Eten en drinken · hotelversie",3500,5000]]}
+    };
+    // Hotel photographs from the supplied listings, included at the user's request.
+    const hotelPhotos={
+      clara:{url:"https://cf.bstatic.com/xdata/images/hotel/max1024x768/477791855.jpg?k=aa50c26070fff9727b7a1b80f45e75aa897093d8840122468af475014754d963&o=",alt:"Wit gebouw met palmbomen van Villa Clara in Anglet.",caption:"Villa Clara · het gebouw en de palmbomen."},
+      kaliko:{url:"https://cf.bstatic.com/xdata/images/hotel/max1024x768/590394572.jpg?k=18ca6a51087ff3228bdfd1a308413c2c053127ea813c9c8121cad9e8f08b9bf1&o=",alt:"Buitenzwembad bij het Kaliko-hotel in Bidart.",caption:"Kaliko · het buitenzwembad bij het hotel."},
+      grand:{url:"https://cf.bstatic.com/xdata/images/hotel/max500/373796391.jpg?k=9a715aaf1b86c1596b2f7709c4a4b659b08c5810a457252d8f9171edfa0a7a6e&o=",alt:"Een slaapkamer met bed en uitzicht op een patio bij Le Grand Hôtel de la Plage.",caption:"Le Grand Hôtel de la Plage · een kamervoorbeeld, geen bevestigde gezinskamer."}
+    };
+    const coastPitch={clara:"Samen koken, eigen ruimte, strand dichtbij.",kaliko:"Baskische dorpssfeer, zwembad en hotelgemak.",grand:"Oceaan voor de deur, hotelcomfort en uit eten."};
+    const motionPreference=matchMedia("(prefers-reduced-motion: reduce)");
+    let motionPaused=motionPreference.matches;
+    let lastTrain="A";
+    let journeyVehicle,journeyFrame;
+    let journeyPoints=[],journeyProgress=0,journeyLastTime;
+    let journeyLabels=[],journeyView="route",journeyStop=-1,journeyPhotoIndex=0;
+    const projectPlace=([lat,lon])=>[(lon+6)*36,(54-lat)*46];
+    // Original simplified country silhouettes; not surveying or navigation data.
+    const illustratedCountries=[
+      ["Frankrijk","#e7edc4",[[51.1,2.5],[50.8,3.3],[50.1,4.2],[49.5,5.8],[49,8.2],[47.6,7.6],[47.4,7],[46.4,6],[46.1,6.8],[45.8,7],[44.2,7.7],[43.8,7.5],[43.1,6.1],[43.3,5],[43.3,3],[42.5,3],[42.8,.7],[43.4,-1.8],[44.6,-1.2],[46,-1.2],[47,-2.2],[47.8,-4.8],[48.7,-4.8],[48.7,-2],[49.7,-1.9],[49.5,0],[50.2,1.6]]],
+      ["België","#ffd6a3",[[51.1,2.5],[51.5,4.3],[51.2,5.8],[50.8,6.1],[50.1,6.1],[49.5,5.8],[50.1,4.2],[50.8,3.3]]],
+      ["Nederland","#f7e4b2",[[51.5,4.3],[51.1,3.4],[52.1,4.3],[53,4.7],[53.5,6.7],[52.5,7.1],[51.8,6.1],[51.2,5.8]]],
+      ["Duitsland","#d3e7ca",[[50.8,6.1],[51.8,6.1],[52.5,7.1],[53.5,6.7],[53.6,8.5],[54.8,9],[54.8,10],[54.4,10.7],[54.4,13.4],[53.6,14.3],[51,14.9],[50.3,12.3],[49,13.5],[48.5,13.5],[47.5,12.8],[47.3,10.2],[47.6,9.6],[47.6,7.6],[49,8.2],[49.5,6.4],[50.1,6.1]]],
+      ["Zwitserland","#f9d7bb",[[47.6,7.6],[47.6,9.6],[47.3,10.2],[46.8,10.5],[46.2,10.1],[46,9],[45.8,9],[46.1,8.4],[45.8,7],[46.1,6.8],[46.4,6],[47.4,7]]],
+      ["Oostenrijk","#ece2ba",[[47.3,10.2],[47.5,12.8],[48.5,13.5],[48.8,15],[48.7,16.9],[47.7,17.1],[46.7,16],[46.6,14.5],[46.5,13.7],[46.7,12],[46.8,10.5]]],
+      ["Italië","#f6d2b0",[[45.8,7],[46.1,8.4],[45.8,9],[46,9],[46.2,10.1],[46.8,10.5],[46.7,12],[46.5,13.7],[45.6,13.7],[45.7,13.1],[45.4,12.3],[44.9,12.2],[44.1,12.6],[43.6,13.5],[42.4,14.2],[41.8,16.2],[41.2,16.9],[40.1,18.4],[39.8,18],[40.5,17],[40,16.6],[39,17.1],[38,16.1],[38.4,15.6],[39.9,15.8],[40.8,14.1],[41.8,12.3],[42.9,10.6],[43.8,10.1],[44.4,8.8],[43.8,7.5],[44.2,7.7]]],
+      ["Slovenië","#cde3d0",[[46.5,13.7],[46.6,14.5],[46.7,16],[46.4,16.6],[45.6,15.7],[45.5,14.6],[45.5,13.6],[45.6,13.7]]],
+      ["Kroatië","#e3d7bc",[[46.4,16.6],[46.7,16.8],[45.9,18.9],[45.1,19],[45.1,16],[44.2,16.2],[42.7,18.1],[43.5,16],[44.3,15.1],[45.3,14.5],[44.8,13.9],[45.5,13.6],[45.5,14.6],[45.6,15.7]]],
+      ["Spanje","#e9d6ad",[[43.4,-1.8],[42.8,.7],[42.5,3],[41.3,2.2],[40.7,.7],[39.5,-.3],[38,-.7],[36.7,-2.1],[36,-5.5],[37,-7],[41.8,-8.8],[43.5,-8.5],[43.6,-5.5],[43.4,-3]]],
+      ["Verenigd Koninkrijk","#d6e5d0",[[50.1,-5.7],[50.5,-3.8],[50.7,-1.5],[51.1,1.4],[52.2,1.7],[53.2,.3],[54.5,-.8],[55.5,-1.6],[56.5,-2.5],[58,-3.2],[58.5,-5.1],[56,-5.5],[54.8,-4.8],[53.5,-3],[52,-5],[51.5,-3.1]]]
+    ];
+    const mapLabelOffsets={
+      "Diepenbeek":[-20,-34],"Chur":[80,-64],"Tirano":[105,-5],"Verona":[80,40],"Basel":[-90,-45],
+      "Luzern":[-90,-30],"Lugano":[85,0],"Levanto":[70,40],"Andermatt":[100,-55],"Zermatt":[-105,-5],
+      "Piemonte / Alba":[-60,48],"München":[35,-36],"Ljubljana":[85,-25],"Sloveense kust / Piran":[60,46],
+      "Tours":[65,-20],"Anglet":[80,25],"Bidart":[80,25],"Biscarrosse":[85,10]
+    };
+    const mapPlaces={
+      "Diepenbeek":[50.907,5.419],"Chur":[46.8508,9.532],"Tirano":[46.2164,10.1694],
+      "Verona":[45.4384,10.9916],"Basel":[47.5596,7.5886],"Luzern":[47.0502,8.3093],
+      "Lugano":[46.0037,8.9511],"Levanto":[44.1705,9.612],"Andermatt":[46.634,8.593],"Zermatt":[46.0207,7.7491],
+      "Piemonte / Alba":[44.7009,8.0353],"München":[48.1372,11.5756],"Ljubljana":[46.0569,14.5058],
+      "Sloveense kust / Piran":[45.5283,13.5683],"Tours":[47.3941,.6848],
+      "Anglet":[43.526,-1.523],"Bidart":[43.437,-1.592],"Biscarrosse":[44.445,-1.253]
+    };
+    function selectCoast(key){
+      if(!Object.hasOwn(coastChoices,key))throw new Error(`Onbekende kustkeuze: ${key}`);
+      document.getElementById("coast-choice").value=key;
+      document.getElementById("share-coast").value=key;
+      renderCards();selectRoute("E");
+    }
+    function totalsForCoast(key){
+      return [...carTravelCosts,...coastChoices[key].costs,carActivityCosts].reduce((sum,row)=>[sum[0]+row[1],sum[1]+row[2]],[0,0]);
+    }
+    function hotelFigure(key){
+      const p=hotelPhotos[key],figure=document.createElement("figure");
+      figure.className=`photo hotel-photo-${key}`;
+      figure.innerHTML=`<!-- Hotelfoto: ${coastChoices[key].url} --><img src="${escapeHtml(p.url)}" alt="${escapeHtml(p.alt)}" width="1024" height="768" loading="lazy"><p class="photo-error" hidden>Hotelfoto niet geladen. Open de bronlink om de foto's te bekijken.</p><figcaption>${escapeHtml(p.caption)} <a href="${coastChoices[key].url}" target="_blank" rel="noopener noreferrer">Bron: accommodatie op Booking ↗</a></figcaption>`;
+      figure.querySelector("img").addEventListener("error",event=>{event.target.hidden=true;figure.querySelector(".photo-error").hidden=false});
+      return figure;
+    }
+    function syncMotion(){
+      document.documentElement.dataset.motion=motionPaused?"paused":"running";
+      document.getElementById("motion-toggle").textContent=motionPaused?"Start beweging":"Pauzeer beweging";
+      document.getElementById("motion-toggle").setAttribute("aria-pressed",String(motionPaused));
+      cancelAnimationFrame(journeyFrame);
+      journeyLastTime=undefined;
+      if(!motionPaused){
+        document.getElementById("map-popup").hidden=true;
+        if(journeyStop===journeyLabels.length-1){journeyProgress=0;displayJourneyStop(0)}
+      }
+      if(!motionPaused&&journeyVehicle)journeyFrame=requestAnimationFrame(animateJourney);
+    }
+    function animateJourney(time){
+      const stageDuration=7500,stages=journeyPoints.length;
+      if(journeyLastTime!==undefined)journeyProgress=(journeyProgress+Math.min(time-journeyLastTime,100)/(stageDuration*stages))%1;
+      journeyLastTime=time;
+      const position=journeyProgress*stages,index=Math.floor(position),fraction=Math.max(0,(position-index-4/7.5)/(3.5/7.5));
+      const from=journeyPoints[index],to=journeyPoints[index+1]||journeyPoints[0];
+      const eased=fraction*fraction*(3-2*fraction);
+      journeyVehicle.setAttribute("transform",`translate(${from[0]+(to[0]-from[0])*eased} ${from[1]+(to[1]-from[1])*eased})`);
+      if(journeyStop!==index)displayJourneyStop(index);
+      const photoIndex=position-index<2/7.5?0:1;
+      if(fraction===0&&stopPhotos(journeyLabels[index]).length>1&&journeyPhotoIndex!==photoIndex){
+        journeyPhotoIndex=photoIndex;renderStopPhoto();
+      }
+      document.getElementById("map-tour-progress").style.width=`${journeyProgress*100}%`;
+      document.querySelector(".map-active-leg").setAttribute("d",`M${from.join(" ")} L${[from[0]+(to[0]-from[0])*eased,from[1]+(to[1]-from[1])*eased].join(" ")}`);
+      journeyFrame=requestAnimationFrame(animateJourney);
+    }
+    function stopPhotos(label){
+      if(selected==="E"&&label===chosenCoast().town)return ["hotel",...carPhotoSets[document.getElementById("coast-choice").value].gallery.filter(key=>key!=="toursSquare")];
+      const specific={"Tours":["toursSquare"],"Verona":["veronaCity","bernina"],"Ljubljana":["ljubljanaCity","sea"],"Zermatt":["mountain","glacier"],"Chur":["bernina"],"Tirano":["bernina"],"Luzern":["boat"],"Lugano":["boat"],"Levanto":["coast"],"Andermatt":["glacier","mountain"],"Sloveense kust / Piran":["sea"]};
+      return specific[label]||[routes[selected].photo];
+    }
+    function renderStopPhoto(){
+      const list=stopPhotos(journeyLabels[journeyStop]),key=list[journeyPhotoIndex%list.length];
+      document.getElementById("map-stop-photo").replaceChildren(key==="hotel"?hotelFigure(document.getElementById("coast-choice").value):photoFigure(key));
+      const button=document.getElementById("map-photo-next");
+      button.hidden=list.length<2;
+      button.textContent=`Andere foto (${journeyPhotoIndex%list.length+1}/${list.length}) ↗`;
+    }
+    function displayJourneyStop(index){
+      journeyStop=index;journeyPhotoIndex=0;
+      const label=journeyLabels[index],groups=stayGroups(selected),group=groups[index-1];
+      const home=index===0||index===journeyLabels.length-1;
+      const story=home?(index===0?"De koffers zijn gepakt. Drie gezinnen, één nieuw avontuur. Bekijk waar we straks uitpakken.":"Weer thuis, met een hele zomer aan verhalen."):selected==="E"&&group.nights===10?coastPitch[document.getElementById("coast-choice").value]:lodgingPlaces[group.place].activity;
+      document.getElementById("map-stop-story").innerHTML=`<span class="stop-badge">${home?(index===0?"Hier begint het":"Welkom thuis"):`${group.nights} ${group.nights===1?"nacht":"nachten"} · dag ${group.start}${group.start===group.end?"":"–"+group.end}`}</span><h4>${escapeHtml(label.replace("Piemonte / ","").replace("Sloveense kust / ",""))}</h4><p>${escapeHtml(story)}</p><p class="small">${selected==="E"&&group?.nights===10?"Foto's van het gekozen verblijf en de kust.":"Bestemmings- en routebeelden: bekijk het bijschrift voor de exacte plek."}</p>${home?"":`<button type="button" class="button secondary" data-stop="${index}">Hier slapen we →</button>`}<button type="button" id="map-photo-next" class="button secondary">Andere foto</button>`;
+      document.getElementById("map-stop-counter").textContent=`${index+1} / ${journeyLabels.length} · reisstops`;
+      document.querySelectorAll("[data-map-place]").forEach(marker=>marker.dataset.active=String(marker.dataset.mapPlace===label));
+      document.querySelectorAll("[data-tour-stop]").forEach(button=>{button.dataset.active=String(Number(button.dataset.tourStop)===index);button.setAttribute("aria-pressed",String(Number(button.dataset.tourStop)===index))});
+      renderStopPhoto();
+    }
+    function chooseJourneyStop(index){
+      motionPaused=true;syncMotion();
+      journeyProgress=index/journeyPoints.length;
+      displayJourneyStop(index);
+      journeyVehicle.setAttribute("transform",`translate(${journeyPoints[index].join(" ")})`);
+      document.querySelector(".map-active-leg").setAttribute("d","");
+      document.getElementById("map-tour-progress").style.width=`${index/(journeyPoints.length-1)*100}%`;
+    }
+    function fitJourney(){
+      const svg=document.querySelector("#animated-route svg");
+      if(!svg)return;
+      if(journeyView==="all"){svg.setAttribute("viewBox","0 0 900 730");return}
+      const locations=[...journeyPoints,...journeyLabels.map(label=>{
+        const point=projectPlace(mapPlaces[label]),offset=mapLabelOffsets[label];
+        return [point[0]+offset[0],point[1]+offset[1]];
+      })];
+      const xs=locations.map(p=>p[0]),ys=locations.map(p=>p[1]);
+      const left=Math.min(...xs)-90,top=Math.min(...ys)-65,width=Math.max(...xs)-left+90,height=Math.max(...ys)-top+65;
+      svg.setAttribute("viewBox",`${left} ${top} ${width} ${height}`);
+    }
+    function showMapPlace(label){
+      chooseJourneyStop(journeyLabels.indexOf(label));
+      const groups=stayGroups(selected),visits=groups.map((g,i)=>({group:g,index:i})).filter(v=>journeyLabels[v.index+1]===label);
+      const popup=document.getElementById("map-popup");
+      popup.hidden=false;
+      popup.innerHTML=`<strong>${escapeHtml(label)}</strong>${visits.length?visits.map(v=>`<button type="button" class="button secondary" data-stop="${v.index+1}">Stop ${v.index+1} · ${v.group.nights} ${v.group.nights===1?"nacht":"nachten"} · bekijk verblijf →</button>`).join(""):"<p>Hier vertrekken we en komen we weer thuis.</p>"}`;
+      document.querySelectorAll("[data-map-place]").forEach(marker=>marker.setAttribute("aria-pressed",String(marker.dataset.mapPlace===label)));
+    }
+    function renderJourney(){
+      const groups=stayGroups(selected);
+      document.getElementById("journey-stops").innerHTML=groups.map((g,i)=>`<button type="button" data-tour-stop="${i+1}" aria-pressed="false"><b>${String(i+1).padStart(2,"0")} / ${escapeHtml(g.place)}</b><span>${g.nights} ${g.nights===1?"nacht":"nachten"} · dag ${g.start}${g.start===g.end?"":"–"+g.end} · ontdek deze stop →</span></button>`).join("");
+      document.getElementById("atlas-route-label").textContent=`${selected==="E"?"AUTO":"TREIN"} ${selected} · ${currentDays(selected).length} DAGEN · ${groups.length} INCHECKS`;
+      const labels=["Diepenbeek",...groups.map(g=>selected==="E"&&g.nights===10?chosenCoast().town:g.place),"Diepenbeek"];
+      journeyLabels=labels;
+      journeyPoints=labels.map(label=>{
+        if(!mapPlaces[label])throw new Error(`Kaartcoördinaten ontbreken voor ${label}`);
+        return projectPlace(mapPlaces[label]);
+      });
+      cancelAnimationFrame(journeyFrame);
+      const easternLand=[[55,14],[55,28],[39,28],[39,23],[40.5,19.5],[42.7,18.1],[44.2,16.2],[45.1,16],[45.1,19],[45.9,18.9],[46.7,16.8],[46.4,16.6],[46.7,16],[47.7,17.1],[48.7,16.9],[48.8,15],[48.5,13.5],[49,13.5],[50.3,12.3],[51,14.9],[53.6,14.3]];
+      const countries=`<polygon fill="#e4ead5" points="${easternLand.map(p=>projectPlace(p).join(",")).join(" ")}"><title>Vereenvoudigd Oost-Europa</title></polygon>`+illustratedCountries.map(([name,color,outline])=>`<polygon class="map-country" fill="${color}" points="${outline.map(p=>projectPlace(p).join(",")).join(" ")}"><title>${name}</title></polygon>`).join("");
+      const countryNames=[["FRANKRIJK",46.6,2.3],["BELGIË",50.25,3.7],["DUITSLAND",51.5,10.7],["ITALIË",42.8,13],["OOSTENRIJK",47.9,14.8],["SPANJE",41,-2.4]];
+      const mountains=[[46.2,7],[46.5,8],[46.6,9.7],[47,11],[47.2,12.4]].map(p=>{
+        const [x,y]=projectPlace(p);return `<g transform="translate(${x} ${y})"><path d="M-16 10 0-18 16 10Z" fill="#95b4a0"/><path d="M-7-6 0-18 7-6 0-9Z" fill="#fff9ed"/></g>`;
+      }).join("");
+      const markers=[...new Set(labels)].map(label=>{
+        const [x,y]=projectPlace(mapPlaces[label]),[dx,dy]=mapLabelOffsets[label],name=label.replace("Piemonte / ","").replace("Sloveense kust / ","");
+        const width=name.length*9+22;
+        return `<g class="map-place" data-map-place="${escapeHtml(label)}" role="button" tabindex="0" aria-pressed="false" aria-label="${escapeHtml(label)}: bekijk overnachtingen"><title>${escapeHtml(label)}</title><line x1="${x}" y1="${y}" x2="${x+dx}" y2="${y+dy}"/><circle class="stop-halo" cx="${x}" cy="${y}" r="17"/><circle cx="${x}" cy="${y}" r="7"/><rect x="${x+dx-width/2}" y="${y+dy-16}" width="${width}" height="32" rx="10"/><text x="${x+dx}" y="${y+dy+6}" text-anchor="middle">${escapeHtml(name)}</text></g>`;
+      }).join("");
+      const route=journeyPoints.map((p,i)=>`${i?"L":"M"}${p.join(" ")}`).join(" ");
+      document.getElementById("animated-route").innerHTML=`<svg viewBox="0 0 900 730" xmlns="http://www.w3.org/2000/svg" aria-label="Eigen geïllustreerde Europakaart met route ${selected}"><title>${escapeHtml(labels.join(" → "))}</title><defs><pattern id="sea-waves" width="60" height="38" patternUnits="userSpaceOnUse"><path d="M10 18Q20 10 30 18T50 18" fill="none" stroke="#70b9c0" stroke-width="1" opacity=".3"/></pattern></defs><rect x="-500" y="-500" width="2000" height="2000" fill="#bce4e7"/><rect x="-500" y="-500" width="2000" height="2000" fill="url(#sea-waves)"/>${countries}${countryNames.map(([name,lat,lon])=>{const [x,y]=projectPlace([lat,lon]);return `<text class="map-country-name" x="${x}" y="${y}" text-anchor="middle">${name}</text>`}).join("")}${mountains}<text class="map-sea-name" x="58" y="380" transform="rotate(-80 58 380)">Atlantische oceaan</text><text class="map-sea-name" x="300" y="660">Middellandse Zee</text><path class="map-route-shadow" d="${route}"/><path class="map-route-line" d="${route}"/>${markers}<g class="map-vehicle" aria-hidden="true" transform="translate(${journeyPoints[0].join(" ")})"><circle r="19"/><text text-anchor="middle" y="8">${selected==="E"?"🚗":"🚆"}</text></g></svg>`;
+      journeyVehicle=document.querySelector(".map-vehicle");
+      const svg=document.querySelector("#animated-route svg"),ns="http://www.w3.org/2000/svg";
+      const activeLeg=document.createElementNS(ns,"path");activeLeg.setAttribute("class","map-active-leg");
+      svg.insertBefore(activeLeg,svg.querySelector(".map-place"));
+      const clouds=document.createElementNS(ns,"g");clouds.setAttribute("class","map-cloud");
+      clouds.innerHTML='<path d="M290 95q-20-20-35 0q-30-5-25 18h90q5-18-30-18Z M690 260q-20-20-35 0q-30-5-25 18h90q5-18-30-18Z" fill="#fff"/>';
+      svg.insertBefore(clouds,svg.querySelector(".map-route-shadow"));
+      const decor=document.createElementNS(ns,"g");decor.setAttribute("class","map-decor");decor.setAttribute("aria-hidden","true");
+      decor.innerHTML='<g transform="translate(205 120)"><circle r="27" fill="#fff5d9" opacity=".85"/><path d="M0-21 6 0 0 21-6 0Z" fill="#416d70"/><path d="M-21 0 0-6 21 0 0 6Z" fill="#80afb0"/><text x="0" y="-34" text-anchor="middle" font-size="12">N</text></g><g transform="translate(320 540) rotate(-12)"><path d="M-15 0H16L8 9H-8Z" fill="#588f9a"/><path d="M0-27V-3H-13Z" fill="#fff9ed"/><path d="M3-22V-3H15Z" fill="#f2c978"/></g><g transform="translate(360 260)"><path d="M-10 12V-12H0V12M3 12V-22H14V12M17 12V-5H27V12" fill="#b5b58f"/><path d="M-13-12-5-20 3-12M0-22 8-30 17-22M14-5 22-14 30-5" fill="#cc957a"/></g>';
+      svg.insertBefore(decor,svg.querySelector(".map-route-shadow"));
+      svg.querySelector('rect[fill="url(#sea-waves)"]').classList.add("map-wave-lines");
+      document.getElementById("map-popup").hidden=true;
+      journeyProgress=0;
+      displayJourneyStop(0);
+      fitJourney();
+      syncMotion();
+    }
+    const coastDayPlans = [
+      ["Aankomen aan de kust","Na de rit vanuit Tours inchecken en rustig landen.","Kies één plek voor tien nachten; we gaan niet langs alle drie de hotels."],
+      ["De eerste dag zonder auto","Strand of zwembad indien toegankelijk; verder niets hoeven.","Atlantische golven zijn geen meer: zwem in een bewaakte zone en volg de vlaggen."],
+      ["Onze kustplek verkennen","Een korte wandeling en een ijsje, met een lange middagpauze.","Houd de dag lokaal; bagage en auto mogen blijven staan."],
+      ["Een kleine regio-uitstap","Een optionele uitstap passend bij de gekozen kustbasis.","De uitstap is optioneel en niet inbegrepen in de hoofdreisduur."],
+      ["Vandaag blijven we hier","Strand, lezen, spelen en vrije tijd.","Vraag zwembadregels en openingsuren bij het gekozen verblijf."],
+      ["Iedereen zijn eigen tempo","Een losse dag per gezin, samen afspreken voor de avond.","Met appartementen kan koken; bij hotels budgetteren we meer restaurantmaaltijden."],
+      ["Nog een dag zeelucht","Een rustige kustdag zonder verhuisprogramma.","Controleer wind, stroming en strandvlaggen."],
+      ["Een lokale markt of wandeling","Een klein uitstapje en daarna tijd bij het verblijf.","Kies iets dichtbij, niet nog een lange autorit."],
+      ["Laatste volle stranddag","Onze favoriete plek nog eens, zonder nieuwe afspraken.","Plan de terugreis en controleer verkeersverwachtingen."],
+      ["Rustig afronden","Een laatste kustdag en voorbereiden op vertrek morgen.","Leg een aparte Tours-tas klaar; de grote koffers hoeven daar niet open."]
+    ];
+    routes.E={name:"Atlantische kust met de auto",photo:"atlantic",transport:"car",pros:["Slechts drie inchecks in twee plaatsen","Tien nachten op één kustlocatie","Tours als leuke ritonderbreking heen en terug"],cons:["Vier lange rijetappes, ook met pauzes","Hotelkamers kunnen duurder zijn dan appartementen"],score:4,adventure:3,difficulty:"Drie inchecks · vier rijetappes",warning:"Dit voorstel duurt 13 dagen, van 3 tot 15 augustus 2027: Tours op 3 augustus, kust van 4 tot 14 augustus, Tours op 14 augustus en thuis op 15 augustus. De drie kustaccommodaties zijn alternatieven. Augustusfiles kunnen de geraamde tijden verlengen.",costs:[],days:[]};
+    photos.atlantic={url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Biscarrosse_beaches%2C_looking_south%2C_2015.jpg/1280px-Biscarrosse_beaches%2C_looking_south%2C_2015.jpg",source:"https://commons.wikimedia.org/wiki/File:Biscarrosse_beaches,_looking_south,_2015.jpg",artist:"DimiTalen",license:"CC0",licenseUrl:"https://creativecommons.org/publicdomain/zero/1.0/",alt:"Stranden van Biscarrosse langs de Atlantische oceaan, gezien naar het zuiden.",caption:"Biscarrosse-Plage: oceaanstrand bij de kustbasis van Le Grand Hôtel de la Plage. Bestemmingsfoto uit 2015, geen hotelfoto."};
+    Object.assign(photos,{
+      veronaCity:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/20110720_Verona_3078.jpg/1280px-20110720_Verona_3078.jpg",source:"https://commons.wikimedia.org/wiki/File:20110720_Verona_3078.jpg",artist:"Jakub Hałun",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Uitzicht over Verona vanaf Castel San Pietro.",caption:"Verona vanaf Castel San Pietro: het stadsdecor van onze vaste Italiëbasis. Foto uit 2011."},
+      ljubljanaCity:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Ljubljanica_river_in_Ljubljana_%283%29.jpg/1280px-Ljubljanica_river_in_Ljubljana_%283%29.jpg",source:"https://commons.wikimedia.org/wiki/File:Ljubljanica_river_in_Ljubljana_(3).jpg",artist:"Tournasol7",license:"CC BY 4.0",licenseUrl:"https://creativecommons.org/licenses/by/4.0/",alt:"De Ljubljanica tussen gebouwen en bomen met herfstkleuren in Ljubljana.",caption:"Ljubljana langs de Ljubljanica: een plaatsbeeld met herfstkleuren, geen augustusfoto."},
+      bidartCoast:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Bidart-plage-Erretegia.jpeg/1280px-Bidart-plage-Erretegia.jpeg",source:"https://commons.wikimedia.org/wiki/File:Bidart-plage-Erretegia.jpeg",artist:"Christelle Molinié",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Het strand Erretegia aan de kust van Bidart.",caption:"Erretegia in Bidart: een strand in de omgeving van Kaliko, niet het hotel of gegarandeerd de dichtstbijzijnde zwemplek."},
+      bidartVillage:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Mairie_de_Bidart.jpg/1280px-Mairie_de_Bidart.jpg",source:"https://commons.wikimedia.org/wiki/File:Mairie_de_Bidart.jpg",artist:"Communication64210",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Het gemeentehuis van Bidart in het dorpscentrum.",caption:"Bidart: het gemeentehuis en de dorpssfeer, los van het Kaliko-hotel."},
+      bidartBeach:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Plage_d%27Ilbarritz_4.jpg/1280px-Plage_d%27Ilbarritz_4.jpg",source:"https://commons.wikimedia.org/wiki/File:Plage_d%27Ilbarritz_4.jpg",artist:"Jörg Braukmann",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Het strand van Ilbarritz bij Bidart.",caption:"Ilbarritz: een extra kustuitstap in de omgeving van Bidart. Niet bij het hotel inbegrepen."},
+      angletCoast:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Anglet-cavaliers-beach-2014.jpg/1280px-Anglet-cavaliers-beach-2014.jpg",source:"https://commons.wikimedia.org/wiki/File:Anglet-cavaliers-beach-2014.jpg",artist:"Manu6401",license:"CC BY-SA 3.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/3.0/",alt:"Het strand Cavaliers in Anglet aan de Atlantische kust.",caption:"Cavaliers in Anglet, bij de omgeving van Villa Clara. Bestemmingsfoto uit 2014; geen beeld van de residence."},
+      angletBeach:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Chambre_amour.jpg/1280px-Chambre_amour.jpg",source:"https://commons.wikimedia.org/wiki/File:Chambre_amour.jpg",artist:"Joxemai",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"De kust bij Chambre d'Amour in Anglet.",caption:"Chambre d'Amour: een andere kustplek in Anglet voor een lokale uitstap, geen beeld van Villa Clara."},
+      angletSurroundings:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Anglet_-_Lac_de_Chiberta_-_2.jpg/1280px-Anglet_-_Lac_de_Chiberta_-_2.jpg",source:"https://commons.wikimedia.org/wiki/File:Anglet_-_Lac_de_Chiberta_-_2.jpg",artist:"Peter Potrowl",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Het Lac de Chiberta en het groen in Anglet.",caption:"Het groen rond het Lac de Chiberta in Anglet: een omgevingsbeeld, geen hotelzwembad of zwemadvies. Foto: © Peter Potrowl."},
+      biscarrosseVillage:{url:"https://upload.wikimedia.org/wikipedia/commons/d/d9/Biscarosse_Plage_5.JPG",source:"https://commons.wikimedia.org/wiki/File:Biscarosse_Plage_5.JPG",artist:"Delbarre Cedric",license:"Publiek domein",licenseUrl:"https://commons.wikimedia.org/wiki/File:Biscarosse_Plage_5.JPG",alt:"Een kerkgebouw met tuin en groen in Biscarrosse.",caption:"Een kerkgebouw en groen in Biscarrosse. Dit is een plaatsbeeld, geen strandfoto of foto van Le Grand Hôtel de la Plage."},
+      biscarrosseBeach:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Plage_Biscarrosse.JPG/1280px-Plage_Biscarrosse.JPG",source:"https://commons.wikimedia.org/wiki/File:Plage_Biscarrosse.JPG",artist:"KoS",license:"Publiek domein",licenseUrl:"https://commons.wikimedia.org/wiki/File:Plage_Biscarrosse.JPG",alt:"Het zandstrand van Biscarrosse aan de oceaan.",caption:"Biscarrosse-Plage: strand en oceaan als decor voor onze vaste kustbasis."},
+      toursSquare:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Tours_-_Place_Plumereau_-_1.jpg/1280px-Tours_-_Place_Plumereau_-_1.jpg",source:"https://commons.wikimedia.org/wiki/File:Tours_-_Place_Plumereau_-_1.jpg",artist:"Benjamin Smith",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Place Plumereau met historische huizen in Tours.",caption:"Place Plumereau in Tours: een korte wandeling of maaltijd tijdens de tussenovernachting."}
+    });
+    const carPhotoSets={
+      kaliko:{hero:"bidartCoast",gallery:["bidartVillage","bidartBeach","toursSquare"]},
+      clara:{hero:"angletCoast",gallery:["angletSurroundings","angletBeach","toursSquare"]},
+      grand:{hero:"atlantic",gallery:["biscarrosseVillage","biscarrosseBeach","toursSquare"]}
+    };
+    const carTravelCosts=[["Brandstof · 3 auto's incl. lokale ritten",750,1200],["Tol en parkeren · 3 auto's",500,850],["2 nachten · 3 familiekamers in Tours",600,1000]];
+    const carActivityCosts=["Uitstapjes en overige reisreserve",600,1200];
+    let selected = "A";
+    const chosenCoast = () => coastChoices[document.getElementById("coast-choice").value];
+    const euro = value => new Intl.NumberFormat("nl-BE",{style:"currency",currency:"EUR",maximumFractionDigits:0}).format(value);
+    const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
+    const currentDays = key => key!=="E"?routes[key].days:[
+      ["Via de Loire naar onze tussenstop","3 augustus: Diepenbeek → Tours met drie gezinsauto's. Daarna een korte Loirewandeling of eten rond Place Plumereau.",[7,9],"Tours","Inclusief normale pauzes geraamd. Kies een hotel met parkeren; laat geen zichtbare spullen in de auto."],
+      ...coastDayPlans.map((plan,index)=>[plan[0],`${index+4} augustus: ${plan[1]}${index===3?" "+chosenCoast().trip:""}`,index===0?chosenCoast().drive:null,`${chosenCoast().name} · ${chosenCoast().town}`,plan[2]]),
+      ["Nog één keer Tours","14 augustus: uitchecken aan de kust en terug naar Tours. Een korte avondwandeling als er nog energie is.",chosenCoast().drive,"Tours","Boek beide Toursnachten vooraf; hetzelfde hotel betekent toch twee inchecks."],
+      ["Thuis in Diepenbeek","15 augustus: Tours → Diepenbeek, met voldoende pauzes.",[7,9],"Thuis in Diepenbeek","Geen vaste aankomsttijd beloven in de augustusdrukte."]
+    ];
+    const currentCosts = key => key==="E"?[...carTravelCosts,...chosenCoast().costs,carActivityCosts]:routes[key].costs;
+    const totals = key => currentCosts(key).reduce((sum,row) => [sum[0]+row[1],sum[1]+row[2]],[0,0]);
+    const duration = days => {
+      const hours = days.reduce((sum,day) => day[2] ? [sum[0]+day[2][0],sum[1]+day[2][1]] : sum,[0,0]);
+      return `${hours[0]}–${hours[1]} uur`;
+    };
+    const longest = days => {
+      const range = days.filter(day => day[2]).map(day => day[2]).sort((a,b) => b[1]-a[1])[0];
+      return `${range[0]}–${range[1]} uur`;
+    };
+    function stayGroups(key) {
+      const groups=[];
+      currentDays(key).slice(0,-1).forEach((day,index)=>{
+        const previous=groups[groups.length-1];
+        if(previous && previous.place===day[3]){previous.nights++;previous.end=index+1}
+        else groups.push({place:day[3],start:index+1,end:index+1,nights:1,train:day[3].startsWith("Nachttrein")});
+      });
+      return groups;
+    }
+    function lodgingBudget(key) {
+      return currentCosts(key).filter(row=>row[0].includes("nachten ·")).reduce((sum,row)=>[sum[0]+row[1],sum[1]+row[2]],[0,0]);
+    }
+    function searchStay(place) {
+      const destination={"Piemonte / Alba":"Alba, Piemonte, Italy","Sloveense kust / Piran":"Piran, Slovenia"}[place] || place;
+      return `https://www.booking.com/searchresults.nl.html?ss=${encodeURIComponent(destination)}`;
+    }
+    function renderCoastOptions(){
+      document.getElementById("coast-choice-box").hidden=selected!=="E";
+      document.getElementById("car-practical").hidden=selected!=="E";
+      const options=document.getElementById("coast-options");
+      options.replaceChildren(...Object.entries(coastChoices).map(([key,choice])=>{
+        const params=new URLSearchParams({checkin:"2027-08-04",checkout:"2027-08-14",group_adults:"6",group_children:"6",no_rooms:"3"});
+        [14,14,14,12,9,9].forEach(age=>params.append("age",String(age)));
+        const active=choice===chosenCoast(),article=document.createElement("article"),range=totalsForCoast(key);
+        article.className="coast-card";article.dataset.selected=String(active);
+        article.append(hotelFigure(key));
+        const body=document.createElement("div");body.className="coast-card-body";
+        body.innerHTML=`<span class="option-label">${choice.town} · ${choice.type}</span><h3>${choice.name}</h3><p>${coastPitch[key]}</p><p class="hotel-price">${euro(range[0]/3)}–${euro(range[1]/3)} per gezin<br><span class="small">Hele vakantie · ruwe raming</span></p><button type="button" class="button hotel-pick" data-coast="${key}" aria-pressed="${active}">${active?"✓ Gekozen: ":"Kies "}${choice.name}</button><details><summary>Kamers, voorzieningen &amp; controlepunten</summary><p>${choice.description}</p><p><strong>Voor twaalf:</strong> ${choice.rooms}</p><p><strong>Controleren:</strong> ${choice.check}</p></details><a href="${choice.url}?${escapeHtml(params.toString())}" target="_blank" rel="noopener noreferrer">Foto's &amp; aanbod voor 4–14 augustus ↗</a>`;
+        article.append(body);return article;
+      }));
+      const gallery=document.getElementById("car-gallery"),grid=document.getElementById("car-gallery-grid");
+      gallery.hidden=selected!=="E";
+      grid.replaceChildren();
+      if(selected==="E"){
+        const choice=chosenCoast(),set=carPhotoSets[document.getElementById("coast-choice").value];
+        document.getElementById("car-gallery-title").textContent=`Meer foto's: ${choice.town}, de kust en Tours`;
+        const hotelLink=document.getElementById("selected-hotel-gallery");
+        hotelLink.href=choice.url;
+        hotelLink.textContent=`Bekijk de foto's van ${choice.name} ↗`;
+        grid.append(...set.gallery.map(key=>photoFigure(key)));
+      }
+    }
+    function renderLodgings(){
+      const groups=stayGroups(selected),presentation=routePresentation[selected],budget=lodgingBudget(selected),days=currentDays(selected);
+      document.getElementById("lodging-intro").textContent=presentation.stayIntro;
+      document.getElementById("stay-count-note").textContent=`${groups.length} inchecks, ${days.length-1} nachten en ${days.length} dagen. Ieder blok is een apart verblijf, ook bij terugkeer naar dezelfde plaats. ${selected==="E"?"Kust: 4–14 augustus, tien nachten in één gekozen accommodatie.":"Daguitstappen leveren geen extra hotelwissel op."}`;
+      document.getElementById("stay-strip").innerHTML=groups.map((group,index)=>`<li style="--nights:${group.nights}"><a href="#stay-${index+1}"><b>${escapeHtml(group.place)}</b></a><span>${group.nights} ${group.nights===1?"nacht":"nachten"} · dag ${group.start}${group.end!==group.start?"–"+group.end:""}${selected==="E"?` · ${group.start+2}${group.end!==group.start?"–"+(group.end+2):""} aug.`:""}</span></li>`).join("");
+      const mainIndex=groups.findIndex(group=>group.nights===Math.max(...groups.map(g=>g.nights)));
+      document.getElementById("lodgings").innerHTML=groups.map((group,index)=>{
+        const coast=selected==="E"&&index===1?chosenCoast():null;
+        const place=coast?{area:`${coast.town}: kies de geselecteerde accommodatie voor tien nachten. Bevestig parking en toegang met bagage.`,activity:"Tien nachten strand, rust en optionele lokale uitstappen zonder hotelwissel.",options:[[coast.name,coast.description],[coast.type==="Residence met appartementen"?"Drie units bij elkaar":"Passende kamers voor alle twaalf reizigers",coast.rooms]],check:coast.check}:lodgingPlaces[group.place];
+        if(!place)throw new Error(`Verblijfsinformatie ontbreekt voor ${group.place}`);
+        const example=place.example;
+        return `<li><details class="stay" id="stay-${index+1}" ${index===mainIndex?"open":""}><summary><span class="stay-number">${String(index+1).padStart(2,"0")}</span><span class="stay-heading"><strong>${escapeHtml(group.place)}</strong><span>Dag ${group.start}${group.end!==group.start?"–"+group.end:""} · ${group.nights>=3?"Vaste vakantiebasis":"Tussenstop"}${coast?" · één gekozen kustaccommodatie":" · twee verblijfsmogelijkheden"}</span></span><span class="night-badge">${group.nights} ${group.nights===1?"nacht":"nachten"}</span></summary><div class="stay-body"><p><strong>Hier doen we:</strong> ${place.activity}</p><p><strong>De juiste ligging:</strong> ${place.area}</p><div class="stay-options">${place.options.map((option,optionIndex)=>`<div class="stay-option"><span class="option-label">${coast?"Gekozen verblijf / groepsindeling":"Verblijfsmogelijkheid "+(optionIndex+1)}</span><h4>${option[0]}</h4><p>${option[1]}</p><a href="${coast?coast.url:searchStay(group.place)}" target="_blank" rel="noopener noreferrer">${coast?"Bekijk de accommodatie":"Zoek aanbod in "+escapeHtml(group.place)} ↗</a></div>`).join("")}</div>${example?`<p class="stay-check"><strong>Bekeken voorbeeld, nog geen offerte:</strong> <a href="${example.url}" target="_blank" rel="noopener noreferrer">${example.name}</a>. ${example.text}${example.secondUrl?` <a href="${example.secondUrl}" target="_blank" rel="noopener noreferrer">${example.secondName} ↗</a>`:""}</p>`:""}<p class="stay-check"><strong>Eerst controleren:</strong> ${place.check}</p></div></details></li>`;
+      }).join("");
+      document.getElementById("lodging-total").innerHTML=`<strong>Voor alle ${days.length-1} overnachtingen begroot:</strong> ${euro(budget[0])}–${euro(budget[1])} voor de groep, of ${euro(budget[0]/3)}–${euro(budget[1]/3)} per gezin. ${selected==="E"?"De reserve verandert met de gekozen kustaccommodatie; geen opgezochte offerte.":"Referentieraming voor kamers en appartementen, geen geprijsde hotelvoorbeelden."} <a href="#kosten">Bekijk de hele begroting.</a>`;
+      document.getElementById("selected-label").textContent=`Je bekijkt variant ${selected} · ${presentation.feel}`;
+      document.getElementById("selected-title").textContent=routes[selected].name;
+      document.getElementById("selected-story").textContent=presentation.story;
+      document.getElementById("selected-tradeoffs").innerHTML=`<div><strong>Wat spreekt aan</strong><ul>${routes[selected].pros.map(x=>`<li>${x}</li>`).join("")}</ul></div><div><strong>Wat vraagt aandacht</strong><ul>${routes[selected].cons.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;
+      const total=totals(selected),transport=routes[selected].transport==="car"?"3 gezinsauto's · pauzes inbegrepen":"trein · geen huurauto";
+      document.getElementById("route-summary").innerHTML=`<div><strong>${days.length} dagen / ${days.length-1} nachten</strong><span>${groups.length} inchecks · maximaal vier</span></div><div><strong>${euro(total[0]/3)}–${euro(total[1]/3)}</strong><span>per gezin · alles samen geraamd</span></div><div><strong>${duration(days)}</strong><span>${transport}</span></div><div><strong>${longest(days)}</strong><span>langste reisdag · kinderen ${routes[selected].score}/5</span></div>`;
+      const trainLabels={A:"Bernina Express",B:"Gotthard Panorama Express",C:"Glacier Express",D:"Dagtreinen via München"};
+      document.getElementById("treinen").hidden=selected==="E";
+      document.getElementById("train-detail-label").textContent=`Praktische treininfo bij ${selected}: ${trainLabels[selected] || ""}`;
+      document.querySelectorAll(".train").forEach((train,index)=>train.hidden=index!==["A","B","C","D"].indexOf(selected));
+      renderCoastOptions();
+    }
+    function photoFigure(key,hero=false) {
+      const p=photos[key],figure=document.createElement("figure");
+      figure.className=`photo photo-${key}${hero?" hero-photo":""}`;
+      figure.innerHTML=`<!-- Bron: ${p.source} --><img src="${escapeHtml(p.url)}" alt="${escapeHtml(p.alt)}" width="1280" height="850" ${hero?'fetchpriority="high"':'loading="lazy"'} decoding="async"><p class="photo-error" hidden>Foto niet geladen. Controleer je internetverbinding; de bron staat hieronder.</p><figcaption><span class="caption-text">${escapeHtml(p.caption)}</span><details class="photo-credit"><summary>Fotobron &amp; licentie</summary><p>Foto: ${escapeHtml(p.artist)} · <a href="${p.source}" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="${p.licenseUrl}" target="_blank" rel="noopener noreferrer">${p.license}</a>. Weergave mogelijk bijgesneden.</p></details></figcaption>`;
+      const img=figure.querySelector("img");
+      img.addEventListener("error",()=>{img.hidden=true;figure.querySelector(".photo-error").hidden=false});
+      return figure;
+    }
+    function renderCards() {
+      const grid=document.getElementById("route-cards");grid.replaceChildren();
+      for(const [key,r] of Object.entries(routes)){
+        if(key==="E")continue;
+        const total=totals(key),days=currentDays(key),article=document.createElement("article");
+        article.className="route-card";article.dataset.card=key;article.dataset.selected=String(key===selected);
+        article.append(photoFigure(r.photo));
+        const content=document.createElement("div");content.className="route-content";
+        const presentation=routePresentation[key];
+        const pitches={A:"Bergen als spektakel. Daarna Verona, ijsjes en optionele Garda-dagen.",B:"Boot, bergen en acht nachten strand. Cinque Terre als daguitstap.",C:"Matterhorn en Glacier Express. Daarna acht nachten rustig Piemonte.",D:"Zes nachten Ljubljana, vijf nachten zee. De langste treindagen."};
+        content.innerHTML=`<span class="route-label">Treinroute ${key}</span><h3>${presentation.short}</h3><p>${pitches[key]}</p><p class="route-price"><strong>${euro(total[0]/3)}–${euro(total[1]/3)}</strong><span class="small">per gezin · ${days.length} dagen · raming</span></p><button type="button" class="button" data-route="${key}" aria-pressed="${key===selected}">${key===selected?"✓ Deze route bekijken":"Ontdek deze route"} <span aria-hidden="true">↓</span></button>`;
+        article.append(content);grid.append(article);
+      }
+      document.getElementById("comparison-body").innerHTML=Object.entries(routes).map(([key,r])=>{
+        const total=totals(key),days=currentDays(key);
+        const groups=stayGroups(key),accommodations=groups.filter(group=>!group.train).length;
+        const stops=`${accommodations} stops${groups.some(group=>group.train)?" + 2 treinnachten":""}`;
+        return `<tr data-compare="${key}" data-selected="${key===selected}"><th scope="row">${key} · ${r.name}<br><span class="small">${days.length} dagen · ${r.transport==="car"?"auto":"trein"}</span></th><td>${duration(days)}</td><td>${longest(days)}</td><td>${stops}</td><td>${r.adventure}/5</td><td>${euro(total[0])}–${euro(total[1])}</td><td>${r.difficulty} · ${r.score}/5</td></tr>`;
+      }).join("");
+      const ranges=Object.keys(routes).map(totals);
+      document.getElementById("hero-budget").textContent=`${euro(Math.min(...ranges.map(x=>x[0]))/3)}–${euro(Math.max(...ranges.map(x=>x[1]))/3)}`;
+    }
+    function renderTimeline(){
+      const r=routes[selected],days=currentDays(selected);
+      document.getElementById("timeline-title").textContent=`Bekijk alle ${days.length} dagen van route ${selected} · ${routePresentation[selected].short}`;
+      const groups=stayGroups(selected);
+      document.getElementById("timeline-summary").textContent=`Diepenbeek → Diepenbeek · ${days.length} dagen · ${days.length-1} nachten · ${duration(days)} onderweg · ${groups.length} inchecks · ${r.transport==="car"?"drie auto's":"per trein"}`;
+      document.getElementById("route-warning").textContent=r.warning;
+      document.getElementById("timeline").innerHTML=days.map((day,index)=>{
+        const [title,description,hours,night,tip]=day;
+        const travel=hours?`${hours[0]}–${hours[1]} uur inclusief ${r.transport==="car"?"normale pauzes; files kunnen dit verlengen":"overstappen en transfers"}`:rest,last=index===days.length-1;
+        return `<li class="day"><details><summary><span class="day-num">DAG ${String(index+1).padStart(2,"0")}</span><span class="day-title">${title}<span class="day-night">${last?"Thuis":"Slapen: "+night} · ${hours?hours[0]+"–"+hours[1]+" uur reizen":"rust / lokaal"} ${hours&&hours[1]>=8?'<span class="long-trip">Lange reisdag</span>':""}</span></span></summary><div class="day-content"><p>${description}</p><div class="day-meta">Reis: ${travel}<br>${last?"Aankomst":"Overnachting"}: ${night}</div><p class="tip"><strong>Kleine tip →</strong> ${tip}</p></div></details></li>`;
+      }).join("");
+      document.getElementById("destination-photo").replaceChildren(photoFigure(selected==="E"?carPhotoSets[document.getElementById("coast-choice").value].hero:r.photo));
+      renderLodgings();
+      renderJourney();
+    }
+    function renderCosts(){
+      const r=routes[selected],rows=currentCosts(selected),total=totals(selected);
+      document.getElementById("cost-caption").textContent=`Variant ${selected} · ${r.name}${selected==="E"?" · "+chosenCoast().name:""} · ${currentDays(selected).length} dagen`;
+      document.getElementById("cost-body").innerHTML=rows.map(row=>`<tr><th scope="row">${row[0]}</th><td>${euro(row[1])}</td><td>${euro(row[2])}</td></tr>`).join("");
+      document.getElementById("cost-low").textContent=euro(total[0]);document.getElementById("cost-high").textContent=euro(total[1]);
+      document.getElementById("night-breakdown").textContent=stayGroups(selected).map(group=>`${group.place}: ${group.nights} ${group.nights===1?"nacht":"nachten"}`).join(" · ")+". Geen extra hotel voor daguitstappen.";
+      updateBudget();
+    }
+    function updateBudget(){
+      const total=totals(selected),fraction=Number(document.getElementById("budget-slider").value)/100;
+      const amount=Math.round(total[0]+(total[1]-total[0])*fraction),family=amount/3;
+      document.getElementById("group-total").textContent=euro(amount);
+      document.getElementById("family-total").textContent=`${euro(family)} per gezin`;
+      const differenceLow=family-6000,differenceHigh=family-4000;
+      const signed=value=>(value>=0?"+":"−")+euro(Math.abs(value));
+      document.getElementById("car-comparison").textContent=selected==="E"?"Autoraming voor drie bestaande gezinsauto's, zonder huur of afschrijving. Brandstof, tol, parkeren en normale pauzes meegerekend; accommodatieprijzen en kamercapaciteit nog te bevestigen.":"Auto naar Istrië: referentie "+euro(4000)+"–"+euro(6000)+" per gezin. Onze huidige treinraming ligt "+signed(differenceLow)+" tot "+signed(differenceHigh)+" tegenover die referentie. Andere bestemmingen, geen gelijkwaardige offertes.";
+      updateShare();
+    }
+    function updateShare(){
+      const input=document.getElementById("family-budget"),value=input.value;
+      let budget="Ons maximumbudget bespreken we nog.";
+      if(value && input.validity.valid)budget=`Ons maximumbudget: ${euro(Number(value))} per gezin.`;
+      const total=totals(selected);
+      const stays=stayGroups(selected).map(group=>`${group.place} (${group.nights} ${group.nights===1?"nacht":"nachten"})`).join(" → ");
+      const days=currentDays(selected);
+      const text=`Wij hebben zin in variant ${selected}: ${routes[selected].name}!\n${selected==="E"?"3–15 augustus 2027; kust 4–14 augustus bij "+chosenCoast().name+".\n":""}${days.length-1} nachten: ${stays}.\n${selected==="E"?"Gekozen accommodatie: "+chosenCoast().name+"; twaalf bedden en kamerindeling nog bevestigen.":"Voorkeur op de langere stops: "+document.getElementById("stay-choice").value+"."}\n${budget}\nDe huidige planningsraming is ${euro(total[0]/3)}–${euro(total[1]/3)} per gezin voor ${days.length} dagen. Beschikbaarheid, kinderprijzen en alle kamers nog samen controleren.`;
+      document.getElementById("share-text").value=text;
+      document.getElementById("whatsapp-link").href=`https://wa.me/?text=${encodeURIComponent(text)}`;
+    }
+    function selectRoute(key,scroll=false){
+      if(!Object.hasOwn(routes,key))throw new Error(`Onbekende route: ${key}`);
+      selected=key;document.getElementById("choice-route").value=key;
+      if(key!=="E")lastTrain=key;
+      document.getElementById("varianten").hidden=key==="E";
+      document.getElementById("waarom").hidden=key==="E";
+      document.querySelector(".route-picker").hidden=key==="E";
+      document.getElementById("stay-choice-label").hidden=key==="E";
+      document.getElementById("share-coast-label").hidden=key!=="E";
+      document.getElementById("share-coast").value=document.getElementById("coast-choice").value;
+      document.querySelectorAll("[data-mode]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.mode===(key==="E"?"car":"train"))));
+      document.querySelectorAll("[data-route]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.route===key)));
+      document.querySelectorAll("[data-card]").forEach(card=>card.dataset.selected=String(card.dataset.card===key));
+      document.querySelectorAll("[data-compare]").forEach(row=>row.dataset.selected=String(row.dataset.compare===key));
+      document.querySelectorAll(".route-card [data-route]").forEach(button=>button.innerHTML=`${button.dataset.route===key?"✓ Deze route bekijken":"Ontdek deze route"} <span aria-hidden="true">↓</span>`);
+      renderTimeline();renderCosts();
+      document.getElementById("selection-status").textContent=`Variant ${key} geselecteerd${key==="E"?" met "+chosenCoast().name:""}. Verblijfstops, tijdlijn, budget en deeltekst zijn bijgewerkt.`;
+      document.getElementById("decision-title").textContent=key==="E"?`Auto · ${chosenCoast().name}`:`Trein ${key} · ${routePresentation[key].short}`;
+      const total=totals(key);
+      document.getElementById("decision-price").textContent=`${euro(total[0]/3)}–${euro(total[1]/3)} per gezin · raming`;
+      if(scroll){document.getElementById("selected-title").focus({preventScroll:true});document.getElementById("vakantie").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth"})}
+    }
+    const routeChoice=document.getElementById("choice-route");
+    routeChoice.replaceChildren(...Object.entries(routes).map(([key,route])=>{
+      const option=document.createElement("option");option.value=key;option.textContent=`${key} · ${route.name}`;return option;
+    }));
+    document.getElementById("hero-photo").append(photoFigure("bernina",true));
+    const costDetails=document.createElement("details");
+    costDetails.className="disclosure";
+    const costSummary=document.createElement("summary");costSummary.textContent="Waar gaat het budget naartoe? Bekijk de kostenposten";
+    const costBreakdown=document.querySelector(".cost-layout>div");
+    costBreakdown.classList.add("disclosure-content");
+    costBreakdown.before(costDetails);costDetails.append(costSummary,costBreakdown);
+    document.getElementById("main").insertBefore(document.getElementById("treinen"),document.getElementById("praktisch"));
+    document.querySelectorAll("[data-photo]").forEach(slot=>slot.append(photoFigure(slot.dataset.photo)));
+    renderCards();selectRoute(selected);
+    document.addEventListener("click",async event=>{
+      const marker=event.target.closest("[data-map-place]");
+      if(marker)showMapPlace(marker.dataset.mapPlace);
+      const tourStop=event.target.closest("[data-tour-stop]");
+      if(tourStop)chooseJourneyStop(Number(tourStop.dataset.tourStop));
+      const mode=event.target.closest("button[data-mode]");
+      if(mode)selectRoute(mode.dataset.mode==="car"?"E":lastTrain,mode.dataset.mode==="car");
+      const coast=event.target.closest("button[data-coast]");
+      if(coast){const key=coast.dataset.coast;selectCoast(key);document.querySelector(`button[data-coast="${key}"]`).focus({preventScroll:true})}
+      const stop=event.target.closest("button[data-stop]");
+      if(stop){
+        if(document.fullscreenElement){
+          try{await document.exitFullscreen()}
+          catch(error){console.error("Groot beeld kon niet worden gesloten:",error);document.getElementById("map-popup").hidden=false;document.getElementById("map-popup").textContent="Sluit groot beeld met Escape om de verblijfsopties op de pagina te bekijken.";return}
+        }
+        document.getElementById("verblijven").open=true;
+        const stay=document.getElementById(`stay-${stop.dataset.stop}`);stay.open=true;
+        stay.querySelector("summary").focus({preventScroll:true});
+        stay.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth",block:"start"});
+      }
+      const button=event.target.closest("button[data-route]");
+      if(button)selectRoute(button.dataset.route,Boolean(button.closest(".route-card")));
+      const stayLink=event.target.closest("#stay-strip a");
+      if(stayLink){
+        event.preventDefault();
+        const stay=document.querySelector(stayLink.getAttribute("href"));
+        document.getElementById("verblijven").open=true;
+        stay.open=true;
+        stay.querySelector("summary").focus({preventScroll:true});
+        stay.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth",block:"start"});
+      }
+    });
+    document.getElementById("choice-route").addEventListener("change",event=>selectRoute(event.target.value));
+    document.getElementById("coast-choice").addEventListener("change",event=>selectCoast(event.target.value));
+    document.getElementById("share-coast").addEventListener("change",event=>selectCoast(event.target.value));
+    document.getElementById("motion-toggle").addEventListener("click",()=>{motionPaused=!motionPaused;syncMotion()});
+    document.getElementById("map-reset").addEventListener("click",()=>{journeyView="all";fitJourney()});
+    document.getElementById("map-focus").addEventListener("click",()=>{journeyView="route";fitJourney()});
+    const fullscreenButton=document.getElementById("map-fullscreen"),atlas=document.querySelector(".journey-board");
+    fullscreenButton.hidden=!document.fullscreenEnabled;
+    fullscreenButton.addEventListener("click",async()=>{
+      try{if(document.fullscreenElement===atlas)await document.exitFullscreen();else await atlas.requestFullscreen()}
+      catch(error){console.error("Vakantieatlas kon niet schermvullend worden geopend:",error);document.getElementById("map-popup").hidden=false;document.getElementById("map-popup").textContent="Groot bekijken is hier niet toegestaan door de browser. Je kunt de atlas gewoon op deze pagina blijven gebruiken."}
+    });
+    document.addEventListener("fullscreenchange",()=>{fullscreenButton.textContent=document.fullscreenElement===atlas?"Sluit groot beeld ×":"Groot bekijken ⤢"});
+    document.getElementById("map-previous").addEventListener("click",()=>chooseJourneyStop((journeyStop-1+journeyLabels.length)%journeyLabels.length));
+    document.getElementById("map-next").addEventListener("click",()=>chooseJourneyStop((journeyStop+1)%journeyLabels.length));
+    document.getElementById("map-stop-story").addEventListener("click",event=>{
+      if(event.target.closest("#map-photo-next")){motionPaused=true;syncMotion();journeyPhotoIndex++;renderStopPhoto()}
+    });
+    document.querySelector(".map-spotlight").addEventListener("focusin",()=>{motionPaused=true;syncMotion()});
+    document.querySelector(".map-spotlight").addEventListener("click",()=>{motionPaused=true;syncMotion()});
+    document.getElementById("animated-route").addEventListener("keydown",event=>{
+      const marker=event.target.closest("[data-map-place]");
+      if(marker&&(event.key==="Enter"||event.key===" ")){event.preventDefault();showMapPlace(marker.dataset.mapPlace)}
+    });
+    motionPreference.addEventListener("change",event=>{motionPaused=event.matches;syncMotion()});
+    document.getElementById("budget-slider").addEventListener("input",updateBudget);
+    document.querySelectorAll('a[href="#verblijven"]').forEach(link=>link.addEventListener("click",()=>{document.getElementById("verblijven").open=true}));
+    document.getElementById("stay-choice").addEventListener("change",updateShare);
+    document.getElementById("family-budget").addEventListener("input",updateShare);
+    document.getElementById("whatsapp-link").addEventListener("click",event=>{
+      const budget=document.getElementById("family-budget");
+      if(!budget.checkValidity()){event.preventDefault();budget.reportValidity();document.getElementById("copy-status").textContent="Vul een geldig, niet-negatief budget in of laat het veld leeg."}
+    });
+    document.getElementById("copy-choice").addEventListener("click",async()=>{
+      const status=document.getElementById("copy-status"),textarea=document.getElementById("share-text");
+      const budget=document.getElementById("family-budget");
+      if(!budget.checkValidity()){budget.reportValidity();status.textContent="Vul een geldig, niet-negatief budget in of laat het veld leeg.";return}
+      if(!navigator.clipboard || !isSecureContext){textarea.focus();textarea.select();status.textContent="Automatisch kopiëren is hier niet beschikbaar. De tekst is geselecteerd: kopieer met Ctrl+C, Cmd+C of het kopieermenu.";return}
+      try{await navigator.clipboard.writeText(textarea.value);status.textContent="Gekopieerd. Plak de tekst in jullie WhatsApp-groep."}
+      catch(error){console.error("Keuze kon niet naar het klembord worden gekopieerd:",error);textarea.focus();textarea.select();status.textContent="Kopiëren is niet toegestaan door de browser. De tekst is geselecteerd; kopieer die handmatig."}
+    });
+  </script>
+</body>
+</html>
