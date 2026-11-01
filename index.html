@@ -237,6 +237,11 @@
     .map-spotlight:hover img{transform:scale(1.035)}
     #map-stop-photo{overflow:hidden}
     .map-spotlight-body{animation:postcard-in .5s ease-out both}
+    #map-stop-photo .photo{animation:none}
+    #map-stop-photo .photo.is-loaded{animation:postcard-in .6s ease-out both}
+    .map-photo-loading{padding:1rem;color:var(--muted);font-size:.85rem}
+    .map-home-card{min-height:240px;display:grid;place-content:center;text-align:center;background:linear-gradient(135deg,#213d65,#3155e7);color:white;padding:2rem}
+    .map-home-card strong{font-family:var(--serif);font-size:2rem}.map-home-card span{font-size:3rem}
     .map-tour-progress{background:#334d71}.map-tour-progress span{background:linear-gradient(90deg,#6c89ff,#ffcf70)}
     .map-country{filter:drop-shadow(0 3px 1px #648c8d33)}
     .map-route-line{animation:route-flow 1.6s linear infinite;filter:drop-shadow(0 2px 2px #3155e766)}
@@ -540,32 +545,55 @@
       if(!motionPaused&&journeyVehicle)journeyFrame=requestAnimationFrame(animateJourney);
     }
     function animateJourney(time){
-      const stageDuration=7500,stages=journeyPoints.length;
-      if(journeyLastTime!==undefined)journeyProgress=(journeyProgress+Math.min(time-journeyLastTime,100)/(stageDuration*stages))%1;
+      const stageDuration=9500,stages=journeyPoints.length;
+      const image=document.querySelector("#map-stop-photo img");
+      const waitingForPhoto=image&&!image.complete;
+      if(journeyLastTime!==undefined&&!waitingForPhoto)journeyProgress=(journeyProgress+Math.min(time-journeyLastTime,100)/(stageDuration*stages))%1;
       journeyLastTime=time;
-      const position=journeyProgress*stages,index=Math.floor(position),fraction=Math.max(0,(position-index-4/7.5)/(3.5/7.5));
+      const position=journeyProgress*stages,index=Math.floor(position),fraction=Math.max(0,(position-index-6/9.5)/(3.5/9.5));
       const from=journeyPoints[index],to=journeyPoints[index+1]||journeyPoints[0];
       const eased=fraction*fraction*(3-2*fraction);
       journeyVehicle.setAttribute("transform",`translate(${from[0]+(to[0]-from[0])*eased} ${from[1]+(to[1]-from[1])*eased})`);
       if(journeyStop!==index)displayJourneyStop(index);
-      const photoIndex=position-index<2/7.5?0:1;
+      const photoCount=stopPhotos(journeyLabels[index]).length;
+      const photoIndex=Math.min(Math.max(0,photoCount-1),Math.floor((position-index)*9.5/2));
       if(fraction===0&&stopPhotos(journeyLabels[index]).length>1&&journeyPhotoIndex!==photoIndex){
         journeyPhotoIndex=photoIndex;renderStopPhoto();
       }
       document.getElementById("map-tour-progress").style.width=`${journeyProgress*100}%`;
       document.querySelector(".map-active-leg").setAttribute("d",`M${from.join(" ")} L${[from[0]+(to[0]-from[0])*eased,from[1]+(to[1]-from[1])*eased].join(" ")}`);
+      const label=journeyLabels[index];
+      document.getElementById("map-travel-state").textContent=fraction>0?`Onderweg: ${label} → ${journeyLabels[index+1]||journeyLabels[0]}. De foto toont ${label}; de volgende plek verschijnt bij aankomst.`:label==="Diepenbeek"?"Vertrek en thuiskomst in Diepenbeek.":`Nu bij ${label}. Foto's horen bij deze stop.`;
+      document.querySelectorAll("[data-map-place]").forEach(marker=>marker.dataset.active=String(fraction===0&&marker.dataset.mapPlace===label));
       journeyFrame=requestAnimationFrame(animateJourney);
     }
     function stopPhotos(label){
       if(selected==="E"&&label===chosenCoast().town)return ["hotel",...carPhotoSets[document.getElementById("coast-choice").value].gallery.filter(key=>key!=="toursSquare")];
-      const specific={"Tours":["toursSquare"],"Verona":["veronaCity","bernina"],"Ljubljana":["ljubljanaCity","sea"],"Zermatt":["mountain","glacier"],"Chur":["bernina"],"Tirano":["bernina"],"Luzern":["boat"],"Lugano":["boat"],"Levanto":["coast"],"Andermatt":["glacier","mountain"],"Sloveense kust / Piran":["sea"]};
-      return specific[label]||[routes[selected].photo];
+      const specific={"Diepenbeek":[],"Tours":["toursSquare"],"Verona":["veronaCity"],"Ljubljana":["ljubljanaCity"],"Zermatt":["mountain"],"Chur":["churTown"],"Tirano":["tiranoTown"],"Luzern":["boat"],"Lugano":["luganoTown"],"Levanto":["levantoTown"],"Andermatt":["andermattTown"],"Piemonte / Alba":["albaTown"],"Basel":["baselTown"],"München":["munichTown"],"Sloveense kust / Piran":["sea"]};
+      if(!Object.hasOwn(specific,label))throw new Error(`Stopfoto ontbreekt voor ${label}`);
+      return specific[label];
     }
     function renderStopPhoto(){
-      const list=stopPhotos(journeyLabels[journeyStop]),key=list[journeyPhotoIndex%list.length];
-      document.getElementById("map-stop-photo").replaceChildren(key==="hotel"?hotelFigure(document.getElementById("coast-choice").value):photoFigure(key));
+      const list=stopPhotos(journeyLabels[journeyStop]),slot=document.getElementById("map-stop-photo");
       const button=document.getElementById("map-photo-next");
       button.hidden=list.length<2;
+      if(!list.length){
+        slot.innerHTML=`<div class="map-home-card"><span aria-hidden="true">${journeyStop===0?"🧳":"🏡"}</span><strong>${journeyStop===0?"Diepenbeek → vakantie":"Welkom thuis"}</strong><p>3 gezinnen · ${currentDays(selected).length} dagen samen</p></div>`;
+        return;
+      }
+      const key=list[journeyPhotoIndex%list.length],figure=key==="hotel"?hotelFigure(document.getElementById("coast-choice").value):photoFigure(key);
+      const image=figure.querySelector("img"),loading=document.createElement("p");
+      loading.className="map-photo-loading";loading.textContent=`Foto van ${journeyLabels[journeyStop]} laden…`;
+      image.loading="eager";
+      image.style.visibility="hidden";
+      const loaded=()=>{
+        if(!image.naturalWidth)return;
+        image.style.visibility="visible";loading.remove();figure.classList.add("is-loaded");
+      };
+      image.addEventListener("load",loaded,{once:true});
+      image.addEventListener("error",()=>loading.remove(),{once:true});
+      slot.replaceChildren(figure,loading);
+      if(image.complete){loaded();if(!image.naturalWidth)loading.remove()}
       button.textContent=`Andere foto (${journeyPhotoIndex%list.length+1}/${list.length}) ↗`;
     }
     function displayJourneyStop(index){
@@ -573,7 +601,7 @@
       const label=journeyLabels[index],groups=stayGroups(selected),group=groups[index-1];
       const home=index===0||index===journeyLabels.length-1;
       const story=home?(index===0?"De koffers zijn gepakt. Drie gezinnen, één nieuw avontuur. Bekijk waar we straks uitpakken.":"Weer thuis, met een hele zomer aan verhalen."):selected==="E"&&group.nights===10?coastPitch[document.getElementById("coast-choice").value]:lodgingPlaces[group.place].activity;
-      document.getElementById("map-stop-story").innerHTML=`<span class="stop-badge">${home?(index===0?"Hier begint het":"Welkom thuis"):`${group.nights} ${group.nights===1?"nacht":"nachten"} · dag ${group.start}${group.start===group.end?"":"–"+group.end}`}</span><h4>${escapeHtml(label.replace("Piemonte / ","").replace("Sloveense kust / ",""))}</h4><p>${escapeHtml(story)}</p><p class="small">${selected==="E"&&group?.nights===10?"Foto's van het gekozen verblijf en de kust.":"Bestemmings- en routebeelden: bekijk het bijschrift voor de exacte plek."}</p>${home?"":`<button type="button" class="button secondary" data-stop="${index}">Hier slapen we →</button>`}<button type="button" id="map-photo-next" class="button secondary">Andere foto</button>`;
+      document.getElementById("map-stop-story").innerHTML=`<span class="stop-badge">${home?(index===0?"Hier begint het":"Welkom thuis"):`${group.nights} ${group.nights===1?"nacht":"nachten"} · dag ${group.start}${group.start===group.end?"":"–"+group.end}`}</span><h4>${escapeHtml(label.replace("Piemonte / ","").replace("Sloveense kust / ",""))}</h4><p>${escapeHtml(story)}</p><p class="small" id="map-travel-state">${home?"":selected==="E"&&group.nights===10?"Foto's van het gekozen verblijf en de kust.":"Foto van deze stop; zie het bijschrift voor de exacte plek."}</p>${home?"":`<button type="button" class="button secondary" data-stop="${index}">Hier slapen we →</button>`}<button type="button" id="map-photo-next" class="button secondary">Andere foto</button>`;
       document.getElementById("map-stop-counter").textContent=`${index+1} / ${journeyLabels.length} · reisstops`;
       document.querySelectorAll("[data-map-place]").forEach(marker=>marker.dataset.active=String(marker.dataset.mapPlace===label));
       document.querySelectorAll("[data-tour-stop]").forEach(button=>{button.dataset.active=String(Number(button.dataset.tourStop)===index);button.setAttribute("aria-pressed",String(Number(button.dataset.tourStop)===index))});
@@ -663,6 +691,14 @@
     routes.E={name:"Atlantische kust met de auto",photo:"atlantic",transport:"car",pros:["Slechts drie inchecks in twee plaatsen","Tien nachten op één kustlocatie","Tours als leuke ritonderbreking heen en terug"],cons:["Vier lange rijetappes, ook met pauzes","Hotelkamers kunnen duurder zijn dan appartementen"],score:4,adventure:3,difficulty:"Drie inchecks · vier rijetappes",warning:"Dit voorstel duurt 13 dagen, van 3 tot 15 augustus 2027: Tours op 3 augustus, kust van 4 tot 14 augustus, Tours op 14 augustus en thuis op 15 augustus. De drie kustaccommodaties zijn alternatieven. Augustusfiles kunnen de geraamde tijden verlengen.",costs:[],days:[]};
     photos.atlantic={url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Biscarrosse_beaches%2C_looking_south%2C_2015.jpg/1280px-Biscarrosse_beaches%2C_looking_south%2C_2015.jpg",source:"https://commons.wikimedia.org/wiki/File:Biscarrosse_beaches,_looking_south,_2015.jpg",artist:"DimiTalen",license:"CC0",licenseUrl:"https://creativecommons.org/publicdomain/zero/1.0/",alt:"Stranden van Biscarrosse langs de Atlantische oceaan, gezien naar het zuiden.",caption:"Biscarrosse-Plage: oceaanstrand bij de kustbasis van Le Grand Hôtel de la Plage. Bestemmingsfoto uit 2015, geen hotelfoto."};
     Object.assign(photos,{
+      churTown:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Hotel_Marsoel_Altstadt_Chur_2015.jpg/960px-Hotel_Marsoel_Altstadt_Chur_2015.jpg",source:"https://commons.wikimedia.org/wiki/File:Hotel_Marsoel_Altstadt_Chur_2015.jpg",artist:"Cayambe",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Hotel Marsoel in de oude stad van Chur.",caption:"Chur: Hotel Marsoel in de oude stad, als stadsbeeld uit 2015; niet ons geboekte verblijf."},
+      tiranoTown:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Tirano-Porta_Milanese-02.jpg/960px-Tirano-Porta_Milanese-02.jpg",source:"https://commons.wikimedia.org/wiki/File:Tirano-Porta_Milanese-02.jpg",artist:"Asurnipal",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Porta Milanese, de historische stadspoort van Tirano.",caption:"Tirano: de Porta Milanese in onze Italiaanse tussenstop."},
+      luganoTown:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Lake_Lugano_in_Lugano_city_15.jpg/960px-Lake_Lugano_in_Lugano_city_15.jpg",source:"https://commons.wikimedia.org/wiki/File:Lake_Lugano_in_Lugano_city_15.jpg",artist:"Visem",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Het meer bij de stad Lugano.",caption:"Lugano: het meer bij onze tweedaagse tussenstop."},
+      levantoTown:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Levanto-panorama_da_provinciale1.jpg/960px-Levanto-panorama_da_provinciale1.jpg",source:"https://commons.wikimedia.org/wiki/File:Levanto-panorama_da_provinciale1.jpg",artist:"Davide Papalini",license:"CC BY-SA 3.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/3.0/",alt:"Panorama van Levanto in Ligurië.",caption:"Levanto zelf: onze vaste Ligurische kustbasis, niet Vernazza."},
+      andermattTown:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/00_0372_Andermatt_im_Urserental_-_Schweiz.jpg/960px-00_0372_Andermatt_im_Urserental_-_Schweiz.jpg",source:"https://commons.wikimedia.org/wiki/File:00_0372_Andermatt_im_Urserental_-_Schweiz.jpg",artist:"W. Bulach",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Andermatt en het Urserental onder een laag sneeuw.",caption:"Andermatt en het Urserental: winterbeeld van onze bergstop, geen augustusfoto."},
+      albaTown:{url:"https://upload.wikimedia.org/wikipedia/commons/d/db/Alba_italy.jpg",source:"https://commons.wikimedia.org/wiki/File:Alba_italy.jpg",artist:"Cloud7",license:"CC BY-SA 3.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/3.0/",alt:"Uitzicht op de stad Alba in Piemonte.",caption:"Alba in Piemonte: stadsbeeld van de regio voor onze vaste rustbasis."},
+      baselTown:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Mittlere_Br%C3%BCcke_-_Basel.jpg/960px-Mittlere_Br%C3%BCcke_-_Basel.jpg",source:"https://commons.wikimedia.org/wiki/File:Mittlere_Br%C3%BCcke_-_Basel.jpg",artist:"WikiEuropian",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"De Mittlere Brücke in Basel.",caption:"Basel: de Mittlere Brücke tijdens onze terugreisbuffer."},
+      munichTown:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Rathaus_and_Marienplatz_from_Peterskirche_-_August_2006.jpg/960px-Rathaus_and_Marienplatz_from_Peterskirche_-_August_2006.jpg",source:"https://commons.wikimedia.org/wiki/File:Rathaus_and_Marienplatz_from_Peterskirche_-_August_2006.jpg",artist:"Diliff",license:"CC BY-SA 3.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/3.0/",alt:"Het Rathaus en Marienplatz in München, gezien vanaf de Peterskirche.",caption:"München: Rathaus en Marienplatz. Plaatsbeeld uit augustus 2006."},
       veronaCity:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/20110720_Verona_3078.jpg/1280px-20110720_Verona_3078.jpg",source:"https://commons.wikimedia.org/wiki/File:20110720_Verona_3078.jpg",artist:"Jakub Hałun",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Uitzicht over Verona vanaf Castel San Pietro.",caption:"Verona vanaf Castel San Pietro: het stadsdecor van onze vaste Italiëbasis. Foto uit 2011."},
       ljubljanaCity:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Ljubljanica_river_in_Ljubljana_%283%29.jpg/1280px-Ljubljanica_river_in_Ljubljana_%283%29.jpg",source:"https://commons.wikimedia.org/wiki/File:Ljubljanica_river_in_Ljubljana_(3).jpg",artist:"Tournasol7",license:"CC BY 4.0",licenseUrl:"https://creativecommons.org/licenses/by/4.0/",alt:"De Ljubljanica tussen gebouwen en bomen met herfstkleuren in Ljubljana.",caption:"Ljubljana langs de Ljubljanica: een plaatsbeeld met herfstkleuren, geen augustusfoto."},
       bidartCoast:{url:"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Bidart-plage-Erretegia.jpeg/1280px-Bidart-plage-Erretegia.jpeg",source:"https://commons.wikimedia.org/wiki/File:Bidart-plage-Erretegia.jpeg",artist:"Christelle Molinié",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",alt:"Het strand Erretegia aan de kust van Bidart.",caption:"Erretegia in Bidart: een strand in de omgeving van Kaliko, niet het hotel of gegarandeerd de dichtstbijzijnde zwemplek."},
